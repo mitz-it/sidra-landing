@@ -24,7 +24,7 @@ export const SurveyPageOne = styled.section`
 export const SurveyTitle = styled.h1`
   font-family: "Overused Grotesk", sans-serif;
   color: ${theme.colors.white};
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
   font-weight: 400;
 `;
@@ -32,16 +32,10 @@ export const SurveyTitle = styled.h1`
 export const SurveyText = styled.p`
   font-family: "Zarathustra", sans-serif;
   color: ${theme.colors.white};
-  font-size: 3rem;
+  font-size: 3.125rem;
   text-align: center;
-  max-width: 1200px;
+  max-width: 76.438rem;
   line-height: 4rem;
-
-  @media screen and (max-width: 1280px) {
-    font-size: 2rem;
-    line-height: 2.4rem;
-    max-width: 800px;
-  }
 `;
 
 export const SurveyTextScrollContainer = styled.div`
@@ -52,7 +46,7 @@ export const SurveyTextScrollContainer = styled.div`
 export const SurveyTextSecondary = styled.span`
   font-family: "Overused Grotesk", sans-serif;
   color: ${theme.colors.cream};
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
   font-weight: 400;
   opacity: 0.7;
@@ -83,9 +77,6 @@ export const SurveyQuestionNumber = styled.span`
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
 
-  @media screen and (max-width: 1280px) {
-    font-size: 6rem;
-  }
 `;
 
 export const SurveyQuestion = styled.p`

@@ -17,35 +17,22 @@ export const WhoWeArePageOne = styled.section`
   align-items: center;
   gap: 2rem;
   padding-bottom: 2rem;
-
-  @media screen and (max-width: 1280px) {
-    gap: 1rem;
-  }
 `;
 
 export const WhoWeAreTitle = styled.h1`
   font-family: "Overused Grotesk", sans-serif;
   color: ${theme.colors.white};
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
   font-weight: 400;
-
-  @media screen and (max-width: 1280px) {
-    font-size: 1.2rem;
-  }
 `;
 
 export const WhoWeAreText = styled.p`
   font-family: "Zarathustra", sans-serif;
   color: ${theme.colors.white};
-  font-size: 2.5rem;
+  font-size: 2.625rem;
   text-align: center;
-  max-width: 1200px;
-
-  @media screen and (max-width: 1280px) {
-    font-size: 1.7rem;
-    max-width: 800px;
-  }
+  max-width: 78.313rem;
 `;
 
 export const WhoWeAreTextScrollContainer = styled.div`
@@ -56,14 +43,10 @@ export const WhoWeAreTextScrollContainer = styled.div`
 export const WhoWeAreTextSecondary = styled.span`
   font-family: "Overused Grotesk", sans-serif;
   color: ${theme.colors.cream};
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
   font-weight: 400;
   opacity: 0.7;
-
-  @media screen and (max-width: 1280px) {
-    font-size: 1.2rem;
-  }
 `;
 
 export const WhoWeAreTeamTitle = styled.h1`
@@ -77,10 +60,6 @@ export const WhoWeAreTeamTitle = styled.h1`
   margin-left: 15rem;
   margin-top: 8rem;
   margin-bottom: 1rem;
-
-  @media screen and (max-width: 1280px) {
-    font-size: 1.2rem;
-  }
 `;
 
 export const WhoWeAreTeamText = styled.p`

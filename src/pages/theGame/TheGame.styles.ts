@@ -15,10 +15,6 @@ export const TheGameTitle = styled.h1`
   text-align: center;
   font-family: "Zarathustra", sans-serif;
   font-weight: 400;
-
-  @media screen and (max-width: 1280px) {
-    font-size: 3rem;
-  }
 `;
 
 export const TheGameSubtitle = styled.h2`
@@ -28,10 +24,6 @@ export const TheGameSubtitle = styled.h2`
   font-family: "Overused Grotesk", sans-serif;
   font-weight: 400;
   padding-top: 4rem;
-
-  @media screen and (max-width: 1280px) {
-    font-size: 1.8rem;
-  }
 `;
 
 export const TheGameImage = styled.img`
@@ -61,10 +53,6 @@ export const TheGamePageTwoTitle = styled.h2`
   font-family: "Overused Grotesk", sans-serif;
   font-weight: 300;
   padding-bottom: 2rem;
-
-  @media screen and (max-width: 1280px) {
-    font-size: 1.6rem;
-  }
 `;
 
 export const TheGameText = styled.p`
@@ -76,8 +64,6 @@ export const TheGameText = styled.p`
   line-height: 4rem;
 
   @media screen and (max-width: 1280px) {
-    font-size: 2rem;
-    line-height: 3rem;
     max-width: 800px;
   }
 `;
@@ -94,17 +80,15 @@ export const TheGameLicense = styled.span`
   a {
     color: ${theme.colors.white};
   }
-
-  @media screen and (max-width: 1280px) {
-    font-size: 0.8rem;
-  }
 `;
 
 export const TheGameButtonContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-top: 2rem;
   gap: 1rem;
+  flex-wrap: wrap;
 `;
 
 export const TheGameButton = styled.button`
@@ -134,18 +118,10 @@ export const TheGameButtonTextPrimary = styled.span`
   font-size: 2rem;
   margin-left: 0.5rem;
   font-weight: 500;
-
-  @media screen and (max-width: 1280px) {
-    font-size: 1.4rem;
-  }
 `;
 
 export const TheGameButtonTextSecondary = styled.span`
   font-size: 1.2rem;
   margin-left: 0.5rem;
   font-weight: 400;
-
-  @media screen and (max-width: 1280px) {
-    font-size: 0.8rem;
-  }
 `;
