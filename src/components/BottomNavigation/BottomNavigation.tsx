@@ -5,7 +5,7 @@ import {
   BottomNavigationSection,
 } from "./BottomNavigation.styles";
 
-const BottomNavigation = () => {
+const BottomNavigation: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 

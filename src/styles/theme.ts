@@ -5,6 +5,7 @@ export const theme = {
     petrolBlue: "#5F939A",
     yellow: "#FC9918",
     cream: "#FFEEDF",
+    lightCream: "#ffeedf4d",
     black: "#00171F",
     white: "#FFF8F1",
   },

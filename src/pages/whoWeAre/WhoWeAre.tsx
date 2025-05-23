@@ -1,4 +1,4 @@
-import BottomNavigation from "../../components/BottomNavigation/BottomNavigation";
+import BottomNavigation from "../../components/BottomNavigation";
 import {
   WhoWeAreContainer,
   WhoWeAreTitle,
