@@ -32,6 +32,7 @@ export const BottomNavigationItem = styled.button<{ isActive?: boolean }>`
   box-shadow: 0px 4px 0px 0px #000000;
   display: flex;
   align-items: center;
+  font-weight: 500;
 
   &:hover {
     background: ${theme.colors.yellow};
