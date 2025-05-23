@@ -33,6 +33,7 @@ export const SurveyFormContainer = styled.form`
   }
 
   select {
+    margin-top: 3rem;
     width: 32.813rem;
   }
 
