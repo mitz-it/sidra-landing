@@ -32,6 +32,10 @@ export const SurveyFormContainer = styled.form`
     padding: 0.6rem 0.75rem;
   }
 
+  select {
+    width: 32.813rem;
+  }
+
   input[type="checkbox"],
   input[type="radio"] {
     /* Add if not using autoprefixer */
@@ -55,7 +59,7 @@ export const SurveyFormContainer = styled.form`
     place-content: center;
   }
 
-  textarea{
+  textarea {
     margin-top: 1rem;
     padding: 2rem;
     min-height: 12.5rem;
@@ -100,7 +104,9 @@ export const SurveyFormContainer = styled.form`
     transform: scale(1);
   }
 
-  input:focus {
+  input:focus,
+  select:focus,
+  textarea:focus {
     outline: max(2px, 0.15em) solid ${theme.colors.darkRed};
     box-shadow: 0px 4px 0px 0px ${theme.colors.darkRed};
   }
@@ -119,7 +125,6 @@ export const SurveyFormFlex = styled.div<{ width: number }>`
   justify-content: space-between;
   max-width: ${({ width }) => width}rem;
 `;
-
 
 export const SurveyFormColumn = styled.div`
   display: flex;
@@ -161,6 +166,32 @@ export const SurveyQuestionSecondary = styled.p`
   font-family: "Zarathustra", sans-serif;
   color: ${theme.colors.black};
   font-size: 1.5rem;
+`;
+
+export const SubmitButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const SubmitButton = styled.button<{ isActive?: boolean }>`
+  background: ${({ isActive }) =>
+    isActive ? theme.colors.yellow : theme.colors.yellow};
+  font-family: "Overused Grotesk", sans-serif;
+  font-size: 1.8rem;
+  border: 1px solid ${theme.colors.black};
+  border-radius: 1.125rem;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  color: ${theme.colors.black};
+  transition: background 0.3s;
+  box-shadow: 0px 4px 0px 0px #000000;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+
+  &:hover {
+    background: ${theme.colors.yellow};
+  }
 `;
 
 
