@@ -24,7 +24,7 @@ export const BottomNavigationItem = styled.button<{ isActive?: boolean }>`
   font-family: "Overused Grotesk", sans-serif;
   font-size: 1.8rem;
   border: 1px solid ${theme.colors.black};
-  border-radius: 18px;
+  border-radius: 1.125rem;
   padding: 0.5rem 1.2rem;
   cursor: pointer;
   color: ${theme.colors.black};
@@ -32,6 +32,7 @@ export const BottomNavigationItem = styled.button<{ isActive?: boolean }>`
   box-shadow: 0px 4px 0px 0px #000000;
   display: flex;
   align-items: center;
+  font-weight: 500;
 
   &:hover {
     background: ${theme.colors.yellow};

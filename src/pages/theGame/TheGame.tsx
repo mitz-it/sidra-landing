@@ -1,4 +1,4 @@
-import BottomNavigation from "../../components/BottomNavigation/BottomNavigation";
+import BottomNavigation from "../../components/BottomNavigation";
 import {
   TheGameButton,
   TheGameButtonContainer,
@@ -14,7 +14,7 @@ import {
   TheGameText,
   TheGameTitle,
 } from "./TheGame.styles";
-import Cards from "../../assets/img/cards.png";
+import Cards from "../../assets/images/cards.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Scrollbar, Keyboard } from "swiper/modules";
 
