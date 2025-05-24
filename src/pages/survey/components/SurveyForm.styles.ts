@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/theme";
 
-export const SurveyFormContainer = styled.form`
+export const SurveyFormContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -60,10 +60,15 @@ export const SurveyFormContainer = styled.form`
     place-content: center;
   }
 
+  input[type="text"] {
+    width: 41.507rem;
+  }
+
   textarea {
     margin-top: 1rem;
     padding: 2rem;
     min-height: 12.5rem;
+    width: 66.5rem;
   }
 
   input[type="checkbox"]::before,
@@ -172,6 +177,7 @@ export const SurveyQuestionSecondary = styled.p`
 export const SubmitButtonContainer = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 4rem;
 `;
 
 export const SubmitButton = styled.button<{ isActive?: boolean }>`
