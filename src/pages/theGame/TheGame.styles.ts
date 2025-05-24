@@ -10,7 +10,7 @@ export const TheGameContainer = styled.main`
 `;
 
 export const TheGameTitle = styled.h1`
-  font-size: 4rem;
+  font-size: 5.936rem;
   color: ${theme.colors.white};
   text-align: center;
   font-family: "Zarathustra", sans-serif;
@@ -18,7 +18,7 @@ export const TheGameTitle = styled.h1`
 `;
 
 export const TheGameSubtitle = styled.h2`
-  font-size: 2rem;
+  font-size: 3.5rem;
   color: ${theme.colors.white};
   text-align: center;
   font-family: "Overused Grotesk", sans-serif;
@@ -30,10 +30,6 @@ export const TheGameImage = styled.img`
   width: 100%;
   height: 70vh;
   object-fit: scale-down;
-
-  @media screen and (max-width: 1280px) {
-    height: 60vh;
-  }
 `;
 
 export const TheGamePageTwo = styled.section`
@@ -58,20 +54,16 @@ export const TheGamePageTwoTitle = styled.h2`
 export const TheGameText = styled.p`
   font-family: "Zarathustra", sans-serif;
   color: ${theme.colors.white};
-  font-size: 2.8rem;
+  font-size: 3.125rem;
   text-align: center;
-  max-width: 1100px;
+  max-width: 68.625rem;
   line-height: 4rem;
-
-  @media screen and (max-width: 1280px) {
-    max-width: 800px;
-  }
 `;
 
 export const TheGameLicense = styled.span`
   font-family: "Overused Grotesk", sans-serif;
   color: ${theme.colors.white};
-  font-size: 1rem;
+  font-size: 1.125rem;
   text-align: center;
   font-weight: 400;
   margin-top: 1rem;
