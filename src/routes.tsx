@@ -1,15 +1,16 @@
-import { createBrowserRouter, Navigate } from "react-router-dom"
-import Timeline from "./pages/timeline"
+import { createBrowserRouter } from "react-router-dom";
+import Timeline from "./pages/timeline";
 import About from "./pages/about";
 import TheGame from "./pages/theGame";
 import Survey from "./pages/survey";
 import WhoWeAre from "./pages/whoWeAre";
 import HowToNavigate from "./pages/howToNavigate";
+import Loading from "./components/Loading";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/about" />,
+    element: <Loading />,
   },
   {
     path: "/timeline",
@@ -35,8 +36,4 @@ export const router = createBrowserRouter([
     path: "/how-to-navigate",
     element: <HowToNavigate />,
   },
-  {
-    path: "/map",
-    element: <h1>todo</h1>
-  }
 ]);

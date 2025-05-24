@@ -1,11 +1,8 @@
-import BottomNavigation from "../../components/BottomNavigation/BottomNavigation";
+import BottomNavigation from "../../components/BottomNavigation";
 import {
   SurveyContainer,
   SurveyPageOne,
   SurveyPageTwo,
-  SurveyQuestion,
-  SurveyQuestionContainer,
-  SurveyQuestionNumber,
   SurveyText,
   SurveyTextScrollContainer,
   SurveyTextSecondary,
@@ -14,9 +11,11 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Scrollbar, Keyboard } from "swiper/modules";
 import { useState } from "react";
+import SurveyForm from "./components/SurveyForm";
 
 export default function Survey() {
-  const [slide, setSlide] = useState<number>(1);
+  const [slide, setSlide] = useState<number>(0);
+  const [isLocked, setIsLocked] = useState<boolean>(false);
 
   return (
     <SurveyContainer>
@@ -25,9 +24,15 @@ export default function Survey() {
         direction="vertical"
         slidesPerView={1}
         keyboard={{ enabled: true }}
-        onSlideChange={(swiper) => setSlide(swiper.activeIndex + 1)}
         freeMode={true}
-        mousewheel={slide === 1}
+        onSlideChange={(swiper) => {
+          setSlide(swiper.activeIndex);
+          if (swiper.activeIndex === 1) {
+            setIsLocked(true);
+            swiper.disable();
+          }
+        }}
+        mousewheel={!isLocked}
       >
         <SwiperSlide>
           <SurveyPageOne>
@@ -64,265 +69,11 @@ export default function Survey() {
         </SwiperSlide>
         <SwiperSlide>
           <SurveyPageTwo>
-            <section>
-              <SurveyQuestionContainer>
-                <SurveyQuestionNumber>1</SurveyQuestionNumber>
-                <SurveyQuestion>How do you identify yourself?</SurveyQuestion>
-              </SurveyQuestionContainer>
-
-              <label>
-                <input type="checkbox" />
-                Male
-              </label>
-              <label>
-                <input type="checkbox" />
-                Female
-              </label>
-              <label>
-                <input type="checkbox" />
-                Prefer to self describe, below:
-              </label>
-              <input type="text" placeholder="Write here your answer" />
-            </section>
-
-            <section>
-              <SurveyQuestionContainer>
-                <SurveyQuestionNumber>2</SurveyQuestionNumber>
-                <SurveyQuestion>How old are you?</SurveyQuestion>
-              </SurveyQuestionContainer>
-              <label>
-                <input type="checkbox" />
-                18-24
-              </label>
-              <label>
-                <input type="checkbox" />
-                25-34
-              </label>
-              <label>
-                <input type="checkbox" />
-                35-44
-              </label>
-              <label>
-                <input type="checkbox" />
-                45-54
-              </label>
-              <label>
-                <input type="checkbox" />
-                55-64
-              </label>
-              <label>
-                <input type="checkbox" />
-                65+
-              </label>
-            </section>
-
-            <section>
-              <SurveyQuestionContainer>
-                <SurveyQuestionNumber>3</SurveyQuestionNumber>
-                <SurveyQuestion>
-                  Were you born and/or raised in Kuwait?
-                </SurveyQuestion>
-              </SurveyQuestionContainer>
-
-              <label>
-                <input type="checkbox" />
-                Born
-              </label>
-              <label>
-                <input type="checkbox" />
-                Raised
-              </label>
-              <label>
-                <input type="checkbox" />
-                None of the above
-              </label>
-            </section>
-
-            <section>
-              <SurveyQuestionContainer>
-                <SurveyQuestionNumber>4</SurveyQuestionNumber>
-                <SurveyQuestion>Which languages do you speak?</SurveyQuestion>
-              </SurveyQuestionContainer>
-
-              <label>
-                <input type="checkbox" />
-                English
-              </label>
-              <label>
-                <input type="checkbox" />
-                Arabic
-              </label>
-              <label>
-                <input type="checkbox" />
-                Hindi
-              </label>
-              <label>
-                <input type="checkbox" />
-                Bangla
-              </label>
-
-              <label>
-                <input type="checkbox" />
-                Urdu
-              </label>
-              <label>
-                <input type="checkbox" />
-                Tagalog
-              </label>
-              <label>
-                <input type="checkbox" />
-                Tamil
-              </label>
-              <label>
-                <input type="checkbox" />
-                Persian
-              </label>
-
-              <label>
-                <input type="checkbox" />
-                Nepali
-              </label>
-              <label>
-                <input type="checkbox" />
-                Amharic
-              </label>
-              <label>
-                <input type="checkbox" />
-                Other
-              </label>
-            </section>
-
-            <section>
-              <SurveyQuestionContainer>
-                <SurveyQuestionNumber>5</SurveyQuestionNumber>
-                <SurveyQuestion>Which languages do you speak?</SurveyQuestion>
-              </SurveyQuestionContainer>
-
-              <select id="nationality" name="user-nationality">
-                <option value="Banglasesh">Banglasesh</option>
-                <option value="India">India</option>
-                <option value="Egypt">Egypt</option>
-                <option value="Nepal">Nepal</option>
-                <option value="Pakistan">Pakistan</option>
-                <option value="Philippines">Philippines</option>
-                <option value="Saudi Arabia">Saudi Arabia</option>
-                <option value="Sri Lanka">Sri Lanka</option>
-                <option value="Syria">Syria</option>
-                <option value="Others">Others</option>
-              </select>
-            </section>
-
-            <section>
-              <SurveyQuestionContainer>
-                <SurveyQuestionNumber>6</SurveyQuestionNumber>
-                <SurveyQuestion>
-                  Rate the following statements on a scale of 1 to 5 (1 =
-                  strongly disagree 5 = strongly agree)
-                </SurveyQuestion>
-              </SurveyQuestionContainer>
-
-              <SurveyQuestion>Kuwait is my home</SurveyQuestion>
-              <label>
-                <input type="checkbox" />1
-              </label>
-              <label>
-                <input type="checkbox" />2
-              </label>
-              <label>
-                <input type="checkbox" />3
-              </label>
-              <label>
-                <input type="checkbox" />4
-              </label>
-              <label>
-                <input type="checkbox" />5
-              </label>
-
-              <SurveyQuestion>
-                I feel that I am welcomed as a person living in Kuwait
-              </SurveyQuestion>
-              <label>
-                <input type="checkbox" />1
-              </label>
-              <label>
-                <input type="checkbox" />2
-              </label>
-              <label>
-                <input type="checkbox" />3
-              </label>
-              <label>
-                <input type="checkbox" />4
-              </label>
-              <label>
-                <input type="checkbox" />5
-              </label>
-
-              <SurveyQuestion>
-                My memories living in Kuwait are overall positive
-              </SurveyQuestion>
-              <label>
-                <input type="checkbox" />1
-              </label>
-              <label>
-                <input type="checkbox" />2
-              </label>
-              <label>
-                <input type="checkbox" />3
-              </label>
-              <label>
-                <input type="checkbox" />4
-              </label>
-              <label>
-                <input type="checkbox" />5
-              </label>
-
-              <SurveyQuestion>
-                I have been treated unfairly or disrespected because of my
-                nationality in Kuwait
-              </SurveyQuestion>
-              <label>
-                <input type="checkbox" />1
-              </label>
-              <label>
-                <input type="checkbox" />2
-              </label>
-              <label>
-                <input type="checkbox" />3
-              </label>
-              <label>
-                <input type="checkbox" />4
-              </label>
-              <label>
-                <input type="checkbox" />5
-              </label>
-            </section>
-
-            <section>
-              <SurveyQuestionContainer>
-                <SurveyQuestionNumber>7</SurveyQuestionNumber>
-                <SurveyQuestion>
-                  Do you feel you belong in Kuwait?
-                </SurveyQuestion>
-              </SurveyQuestionContainer>
-
-              <label>
-                <input type="checkbox" />
-                Yes
-              </label>
-              <label>
-                <input type="checkbox" />
-                No
-              </label>
-              <label>
-                <input type="checkbox" />
-                Maybe
-              </label>
-              <textarea placeholder="Can you tell us why?" />
-            </section>
+            <SurveyForm />
           </SurveyPageTwo>
         </SwiperSlide>
       </Swiper>
-      {slide === 1 && <BottomNavigation />}
+      {slide === 0 && <BottomNavigation />}
     </SurveyContainer>
   );
 }
