@@ -9,7 +9,7 @@ import HowToNavigate from "./pages/howToNavigate";
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/timeline" />,
+    element: <Navigate to="/about" />,
   },
   {
     path: "/timeline",
@@ -35,4 +35,8 @@ export const router = createBrowserRouter([
     path: "/how-to-navigate",
     element: <HowToNavigate />,
   },
+  {
+    path: "/map",
+    element: <h1>todo</h1>
+  }
 ]);
