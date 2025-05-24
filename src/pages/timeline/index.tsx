@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { PlotModal } from '../../components/PlotModal'
+import TimelineProgress from '../../components/TimelineProgress'
 
 export const TimelineContainer = styled.div`
     width: 100vw;
@@ -16,9 +17,11 @@ export const TimelineContainer = styled.div`
 `
 
 export default function Timeline() {
+  const [currentSlide, setCurrentSlide] = useState(0);
   return (
     <TimelineContainer>
-      <PlotModal/>
+      <TimelineProgress currentSlide={currentSlide}></TimelineProgress>
+      <PlotModal setCurrentSlide={setCurrentSlide} />
     </TimelineContainer>
   )
 }

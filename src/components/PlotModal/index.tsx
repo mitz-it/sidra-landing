@@ -20,7 +20,11 @@ import { useNavigate } from "react-router-dom";
 import { PinIcon } from "../../assets/svg/PinIcon";
 import { LanguageTreePlot } from "../../assets/svg/LanguageTreePlot";
 
-export const PlotModal: React.FC = () => {
+interface PlotModalProps {
+  setCurrentSlide: (slide: number) => void;
+}
+
+export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
   const navigate = useNavigate();
   const [activeSlide, setActiveSlide] = useState<number>(0);
   const [selectedNationality, setSelectedNationality] = useState<string | null>(
@@ -42,8 +46,8 @@ export const PlotModal: React.FC = () => {
         slidesPerView={1}
         keyboard={{ enabled: true }}
         onSlideChange={(swiper) => {
-          console.log("swiper", swiper.activeIndex);
           setActiveSlide(swiper.activeIndex);
+          setCurrentSlide(swiper.activeIndex);
         }}
         onSwiper={(swiper) => setActiveSlide(swiper.activeIndex)}
         freeMode={true}
