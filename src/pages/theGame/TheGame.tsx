@@ -5,6 +5,7 @@ import {
   TheGameButtonTextContainer,
   TheGameButtonTextPrimary,
   TheGameButtonTextSecondary,
+  TheGameCardsContainer,
   TheGameContainer,
   TheGameImage,
   TheGameLicense,
@@ -32,9 +33,11 @@ export default function TheGame() {
         mousewheel
       >
         <SwiperSlide>
-          <TheGameSubtitle>Discover the</TheGameSubtitle>
-          <TheGameTitle>Sidra Card Game</TheGameTitle>
-          <TheGameImage src={Cards} alt="Cards" />
+          <TheGameCardsContainer>
+            <TheGameSubtitle>Discover the</TheGameSubtitle>
+            <TheGameTitle>Sidra Card Game</TheGameTitle>
+            <TheGameImage src={Cards} alt="Cards" />
+          </TheGameCardsContainer>
         </SwiperSlide>
         <SwiperSlide>
           <TheGamePageTwo>
@@ -61,8 +64,7 @@ export default function TheGame() {
             <TheGameButtonContainer>
               <TheGameButton>
                 <svg
-                  width="42"
-                  height="46"
+                  style={{ width: "2.625rem", height: "2.875rem" }}
                   viewBox="0 0 42 46"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -83,8 +85,7 @@ export default function TheGame() {
               </TheGameButton>
               <TheGameButton>
                 <svg
-                  width="42"
-                  height="46"
+                  style={{ width: "2.625rem", height: "2.875rem" }}
                   viewBox="0 0 42 46"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"

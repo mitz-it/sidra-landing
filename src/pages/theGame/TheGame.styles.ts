@@ -4,9 +4,18 @@ import { theme } from "../../styles/theme";
 export const TheGameContainer = styled.main`
   width: 100%;
   height: 100vh;
-
   background-color: ${theme.colors.blue};
   display: flex;
+`;
+
+export const TheGameCardsContainer = styled.section`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
 `;
 
 export const TheGameTitle = styled.h1`
@@ -23,7 +32,6 @@ export const TheGameSubtitle = styled.h2`
   text-align: center;
   font-family: "Overused Grotesk", sans-serif;
   font-weight: 400;
-  padding-top: 4rem;
 `;
 
 export const TheGameImage = styled.img`

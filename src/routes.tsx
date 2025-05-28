@@ -6,6 +6,7 @@ import Survey from "./pages/survey";
 import WhoWeAre from "./pages/whoWeAre";
 import HowToNavigate from "./pages/howToNavigate";
 import Loading from "./components/Loading";
+import Map from "./pages/map";
 
 export const router = createBrowserRouter([
   {
@@ -35,5 +36,9 @@ export const router = createBrowserRouter([
   {
     path: "/how-to-navigate",
     element: <HowToNavigate />,
+  },
+  {
+    path: "/map",
+    element: <Map />,
   },
 ]);

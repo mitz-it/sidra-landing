@@ -19,12 +19,11 @@ const BottomNavigation: React.FC = () => {
   return (
     <BottomNavigationContainer>
       <BottomNavigationItem
-        onClick={() => navigate("/timeline")}
-        isActive={location.pathname === "/timeline"}
+        onClick={() => navigate("/map")}
+        isActive={location.pathname === "/map"}
       >
         <svg
-          width="30"
-          height="37"
+          style={{ width: "1.875rem", height: "2.313rem" }}
           viewBox="0 0 30 37"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -53,8 +52,7 @@ const BottomNavigation: React.FC = () => {
         isActive={location.pathname === "/how-to-navigate"}
       >
         <svg
-          width="21"
-          height="41"
+          style={{ width: "1.269rem", height: "2.269rem" }}
           viewBox="0 0 21 41"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
