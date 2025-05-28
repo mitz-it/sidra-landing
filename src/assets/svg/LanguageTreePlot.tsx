@@ -1,12 +1,23 @@
 import React from "react";
+import styled from "styled-components";
+
+const Container = styled.div`
+  max-width: 763px;
+  width: 100%;
+
+  @media (width >= 1280px) and (height <= 814px) {
+    max-width: 273px;
+    width: 50%;
+  }
+`;
 
 export const LanguageTreePlot = () => {
   return (
-    <div style={{ maxWidth: "738px", width: "100%" }}>
+    <Container>
       <svg
         width="46.125rem"
         height="38.75rem"
-        viewBox="0 0 938 754"
+        viewBox="0 0 1138 754"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -1526,6 +1537,6 @@ export const LanguageTreePlot = () => {
           </clipPath>
         </defs>
       </svg>
-    </div>
+    </Container>
   );
 };
