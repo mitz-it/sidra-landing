@@ -52,8 +52,7 @@ export default function Survey() {
                 scroll down to participate
               </SurveyTextSecondary>
               <svg
-                width="20"
-                height="24"
+                style={{ width: "1.25rem", height: "1.5rem" }}
                 viewBox="0 0 20 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

@@ -9,14 +9,21 @@
 @font-face {
     font-family: 'Zarathustra';
     src: url('../assets/fonts/zarathustra-v01.otf') format('opentype');
-    font-weight: normal 400;
+    font-weight: 400 700;
     font-style: normal;
 }
 
 @font-face {
   font-family: "Overused Grotesk";
   src: url("../assets/fonts/OverusedGrotesk-VF.woff2") format("woff2-variations");
-  font-weight: normal 400 500 600;
+  font-weight: 400 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  src: url("../assets/fonts/NotoNaskhArabic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 700;
   font-style: normal;
 }
 

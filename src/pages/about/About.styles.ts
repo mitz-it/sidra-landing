@@ -31,7 +31,7 @@ export const AboutTitle = styled.h1`
 export const AboutText = styled.p`
   font-family: "Zarathustra", sans-serif;
   color: ${theme.colors.white};
-  font-size: 3.125rem;
+  font-size: 3rem;
   text-align: center;
   max-width: 78.313rem;
   line-height: 4rem;
@@ -63,8 +63,8 @@ export const AboutEllipseContainer = styled.div`
 `;
 
 export const AboutEllipse = styled.div`
-  width: 34.75rem;
-  height: 34.75rem;
+  width: 30rem;
+  height: 30rem;
   background-color: ${theme.colors.cream};
   border-radius: 100%;
   box-shadow: 0px 6px 0px 0px ${theme.colors.black};
@@ -73,8 +73,8 @@ export const AboutEllipse = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3.2rem;
-  font-size: 2.125rem;
+  padding: 3rem;
+  font-size: 2rem;
   text-align: center;
   font-family: "Overused Grotesk", sans-serif;
   position: relative;
@@ -83,13 +83,13 @@ export const AboutEllipse = styled.div`
 export const AboutEllipseNumber = styled.span`
   font-family: "Zarathustra", sans-serif;
   color: ${theme.colors.cream};
-  font-size: 7.5rem;
+  font-size: 7rem;
   text-shadow: 0px 4px 0px #000000;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
   position: absolute;
   left: 3.2rem;
-  top: 1.3rem;
+  top: 0.2rem;
 `;
 
 export const AboutEllipseHighlight = styled.p`
@@ -99,7 +99,7 @@ export const AboutEllipseHighlight = styled.p`
 export const AboutEllipseText = styled.p`
   font-family: "Overused Grotesk", sans-serif;
   color: ${theme.colors.cream};
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
   line-height: 2rem;
 

@@ -84,8 +84,7 @@ export default function WhoWeAre() {
                 get to know us better
               </WhoWeAreTextSecondary>
               <svg
-                width="20"
-                height="24"
+                style={{ width: "1.25rem", height: "1.5rem" }}
                 viewBox="0 0 20 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -105,8 +104,7 @@ export default function WhoWeAre() {
               <WhoWeAreTeamTitle>
                 en.v team
                 <svg
-                  width="54"
-                  height="36"
+                  style={{ width: "3.375rem", height: "2.25rem" }}
                   viewBox="0 0 54 36"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -164,8 +162,7 @@ export default function WhoWeAre() {
                 <WhoWeAreTeamTitle>
                   Playspace team
                   <svg
-                    width="54"
-                    height="36"
+                    style={{ width: "3.375rem", height: "2.25rem" }}
                     viewBox="0 0 54 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -224,8 +221,7 @@ export default function WhoWeAre() {
                 <WhoWeAreTeamTitle>
                   Odd team
                   <svg
-                    width="54"
-                    height="36"
+                    style={{ width: "3.375rem", height: "2.25rem" }}
                     viewBox="0 0 54 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
