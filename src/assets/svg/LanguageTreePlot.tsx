@@ -79,7 +79,7 @@ export const LanguageTreePlot = () => {
         text === languageDescriptions.Urdu ||
         text === languageDescriptions.Hindi
           ? window.scrollY - 100
-          : window.scrollY + 100),
+          : window.scrollY),
     });
     setTooltipText(text);
     setTooltipVisible(true);
