@@ -142,6 +142,10 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
               </InfoTooltip>
             )}
           </div>
+<<<<<<< Updated upstream
+=======
+          <LanguageTreePlot/>
+>>>>>>> Stashed changes
           <ModalContent>
             <LanguageTreePlot />
           </ModalContent>
