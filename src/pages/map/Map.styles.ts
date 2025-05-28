@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../../styles/theme";
-
 
 export const MapContainer = styled.main`
   width: 100vw;

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   InfoIcon,
   InfoTooltip,
-  LanguagePlot,
   Modal,
   ModalContent,
   ModalText,
@@ -38,6 +37,7 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
     if (activeSlide === 0) return { height: "37.5rem", width: "62.5rem" };
     if (activeSlide === 1) return { height: "37.5rem", width: "43.75rem" };
     if (activeSlide === 2) return { height: "31.25rem", width: "43.75rem" };
+    if (activeSlide === 6) return { height: "29.25rem", width: "50.75rem" };
     return { height: "min(54.125rem, 80vh)", width: "min(87.5rem, 90vw)" };
   };
   return (
