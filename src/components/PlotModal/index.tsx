@@ -149,9 +149,7 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
               </InfoTooltip>
             )}
           </div>
-          <LanguagePlot
-            imagePath={`/src/assets/plots/languageTree/image.png`}
-          />
+          <LanguageTreePlot/>
           <ModalContent>
           
             {/* <LanguageTreePlot /> */}
