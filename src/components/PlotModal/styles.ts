@@ -5,7 +5,7 @@ export const Modal = styled.div<{
 }>`
   font-family: "Overused Grotesk", sans-serif;
   width: ${(props) => props.dimensions?.width ?? "90vw"};
-  height: ${(props) => props.dimensions?.height ?? '80vh'};
+  height: ${(props) => props.dimensions?.height ?? "80vh"};
   padding: 2.5rem;
   border-radius: 1.25rem;
   border: 0.03125rem solid #00171f;
@@ -63,6 +63,16 @@ export const SmallSpecialModalText = styled.div`
   text-align: center;
 `;
 
+export const LanguagePlot = styled.div<{ imagePath: string }>`
+  background-image: url(${(props) => props.imagePath});
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 82.5rem;
+  height: 38.25rem;
+`;
+
 export const Plot = styled.div<{
   imagePath: string;
   width?: string;
@@ -76,11 +86,58 @@ export const Plot = styled.div<{
   background-repeat: no-repeat;
   transition: 0.3s ease-in-out;
   opacity: 1;
+
+  @media (min-width: 1440px) {
+    width: ${(props) => props.width ?? "360px"};
+    height: ${(props) => props.height ?? "360px"};
+  }
+
+  @media (max-height: 840px) {
+    width: ${(props) => props.width ?? "20rem"};
+    height: ${(props) => props.height ?? "20rem"};
+  }
+`;
+
+export const RootPlot = styled.div<{ imagePath: string }>`
+  background-image: url(${(props) => props.imagePath});
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.3s ease-in-out;
+  opacity: 1;
+  width: 75rem;
+  height: 31.25rem;
+
+  @media (min-width: 1440px) and (max-height: 840px) {
+    width: 68rem;
+    height: 23.25rem;
+  }
+`;
+
+export const TreePlot = styled.div<{ imagePath: string }>`
+  background-image: url(${(props) => props.imagePath});
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.3s ease-in-out;
+  opacity: 1;
+  width: 75rem;
+  height: 31.25rem;
+
+  @media (min-width: 1440px) {
+    width: 360px;
+    height: 360px;
+  }
+
+  @media (max-height: 840px) {
+    width: 20rem;
+    height: 20rem;
+    margin-top: -1.125rem;
+  }
 `;
 
 export const PlotLegendContainer = styled.div`
   position: relative;
-  top: 3.125rem;
   left: -12.5rem;
   display: flex;
   flex-direction: column;

@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import {
   InfoIcon,
   InfoTooltip,
+  LanguagePlot,
   Modal,
   ModalContent,
   ModalText,
   Plot,
   PlotLegendContainer,
   PlotLegendItem,
+  RootPlot,
   SkipButton,
   SmallSpecialModalText,
   SmallSpecialModalTitle,
+  TreePlot,
 } from "./styles";
 import { LeafIcon } from "../../assets/svg/LeafIcon";
 import { nationalities, plot } from "../../utils/TimelineProps";
@@ -18,7 +21,6 @@ import { Mousewheel, Scrollbar, Keyboard } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from "react-router-dom";
 import { PinIcon } from "../../assets/svg/PinIcon";
-import { LanguageTreePlot } from "../../assets/svg/LanguageTreePlot";
 
 interface PlotModalProps {
   setCurrentSlide: (slide: number) => void;
@@ -114,12 +116,17 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
           </SmallSpecialModalText>
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}>
           <div
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
+              width: "100%",
             }}
           >
             <SmallSpecialModalTitle style={{ textAlign: "left" }}>
@@ -142,12 +149,10 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
               </InfoTooltip>
             )}
           </div>
-<<<<<<< Updated upstream
-=======
           <LanguageTreePlot/>
->>>>>>> Stashed changes
           <ModalContent>
-            <LanguageTreePlot />
+          
+            {/* <LanguageTreePlot /> */}
           </ModalContent>
         </SwiperSlide>
 
@@ -174,8 +179,8 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
                     <span>{item.percent}</span>
                   </PlotLegendItem>
                 ))}
-              </PlotLegendContainer>
-            </Plot>
+                </PlotLegendContainer>
+              </Plot>
           </ModalContent>
         </SwiperSlide>
 
@@ -185,7 +190,7 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
               dangerouslySetInnerHTML={{ __html: plot[1].description }}
               highlightColor="#cab8a0"
             />
-            <Plot imagePath={`/src/assets/plots/expatriateTree/tree.webp`} />
+            <TreePlot imagePath={`/src/assets/plots/expatriateTree/tree.webp`} />
           </ModalContent>
         </SwiperSlide>
 
@@ -232,10 +237,8 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
               highlightColor="#FC9918"
               style={{ fontSize: "1.5rem" }}
             />
-            <Plot
+            <RootPlot
               imagePath={`/src/assets/plots/residentRoot/root.webp`}
-              width="75rem"
-              height="31.25rem"
             />
           </ModalContent>
         </SwiperSlide>
