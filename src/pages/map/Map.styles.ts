@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import map from "../../assets/images/map.png";
 
 export const MapContainer = styled.main`
   width: 100vw;
@@ -9,7 +10,7 @@ export const MapContainer = styled.main`
 export const MapBackground = styled.div`
   width: 100%;
   height: 100%;
-  background-image: url("/src/assets/images/map.png");
+  background-image: url(${map});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

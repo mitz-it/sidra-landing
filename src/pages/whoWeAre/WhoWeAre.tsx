@@ -18,35 +18,45 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Scrollbar, Keyboard } from "swiper/modules";
 
+import oddLogo from "../../assets/images/odd_logo.png";
+import bruno from "../../assets/images/PlayspaceTeam/Bruno_Setola.jpg";
+import giuliana from "../../assets/images/en.vTeam/Giuliana_Lomonaco.jpg";
+import hafsa from "../../assets/images/en.vTeam/Hafsa_Omer.jpg";
+import irfana from "../../assets/images/en.vTeam/Irfana_Nasir.jpg";
+import israa from "../../assets/images/en.vTeam/Israa_Naeem.jpg";
+import khalil from "../../assets/images/en.vTeam/Khalil_Changhouri.jpg";
+import lynn from "../../assets/images/en.vTeam/Lynn_Pais.jpg";
+import taha from "../../assets/images/en.vTeam/Taha_Banatwala.jpg";
+
 export default function WhoWeAre() {
   const teamEnv = [
     {
-      image: "Giuliana_Lomonaco.jpg",
+      image: giuliana,
       name: "Giuliana Lomonaco",
       job: "Sociologist | Social Researcher",
     },
     {
-      image: "Hafsa_Omer.jpg",
+      image: hafsa,
       name: "Hafsa Omer",
     },
     {
-      image: "Irfana_Nasir.jpg",
+      image: irfana,
       name: "Irfana Nasir",
     },
     {
-      image: "Israa_Naeem.jpg",
+      image: israa,
       name: "Israa Naeem",
     },
     {
-      image: "Khalil_Changhouri.jpg",
+      image: khalil,
       name: "Khalil Changhouri",
     },
     {
-      image: "Lynn_Pais.jpg",
+      image: lynn,
       name: "Lynn Pais",
     },
     {
-      image: "Taha_Banatwala.jpg",
+      image: taha,
       name: "Taha Banatwala",
     },
   ];
@@ -143,7 +153,7 @@ export default function WhoWeAre() {
               {teamEnv.map((item) => (
                 <WhoWeAreCard>
                   <img
-                    src={`/src/assets/images/en.vTeam/${item.image}`}
+                    src={item.image}
                     alt={item.name}
                   />
                   <WhoWeAreCardLegend>
@@ -207,7 +217,7 @@ export default function WhoWeAre() {
 
               <WhoWeAreCard>
                 <img
-                  src={`/src/assets/images/PlayspaceTeam/Bruno_Setola.jpg`}
+                  src={bruno}
                   alt="Bruno Setola"
                 />
               </WhoWeAreCard>
@@ -262,7 +272,7 @@ export default function WhoWeAre() {
                 </WhoWeAreTeamText>
               </WhoWeAreTeamContainer>
               <WhoWeAreCard>
-                <img src={`/src/assets/images/odd_logo.png`} alt="Odd" />
+                <img src={oddLogo} alt="Odd" />
               </WhoWeAreCard>
             </WhoWeAreTeamAside>
           </WhoWeAreTeamPage>

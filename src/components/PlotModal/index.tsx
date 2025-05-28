@@ -15,7 +15,7 @@ import {
   TreePlot,
 } from "./styles";
 import { LeafIcon } from "../../assets/svg/LeafIcon";
-import { nationalities, plot } from "../../utils/TimelineProps";
+import { fullTree, nationalities, plot } from "../../utils/TimelineProps";
 import { Mousewheel, Scrollbar, Keyboard } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from "react-router-dom";
@@ -29,15 +29,12 @@ interface PlotModalProps {
 export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
   const navigate = useNavigate();
   const [activeSlide, setActiveSlide] = useState<number>(0);
-  const [selectedNationality, setSelectedNationality] = useState<string | null>(
-    null
-  );
+  const [selectedNationality, setSelectedNationality] = useState<string>(fullTree);
   const [hovered, setHovered] = useState(false);
   const getModalDimensions = () => {
     if (activeSlide === 0) return { height: "37.5rem", width: "62.5rem" };
     if (activeSlide === 1) return { height: "37.5rem", width: "43.75rem" };
     if (activeSlide === 2) return { height: "31.25rem", width: "43.75rem" };
-    if (activeSlide === 6) return { height: "29.25rem", width: "50.75rem" };
     return { height: "min(54.125rem, 80vh)", width: "min(87.5rem, 90vw)" };
   };
   return (
@@ -163,17 +160,15 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
               dangerouslySetInnerHTML={{ __html: plot[0].description }}
             />
             <Plot
-              imagePath={`/src/assets/plots/tree/${
-                selectedNationality ?? "full_tree"
-              }.webp`}
+              imagePath={selectedNationality}
             >
               <PlotLegendContainer>
                 <strong>Nationalities:</strong>
                 {nationalities.map((item) => (
                   <PlotLegendItem
                     key={item.name}
-                    onMouseOver={() => setSelectedNationality(item.pathName)}
-                    onMouseLeave={() => setSelectedNationality(null)}
+                    onMouseOver={() => setSelectedNationality(item.image)}
+                    onMouseLeave={() => setSelectedNationality(fullTree)}
                   >
                     <LeafIcon color={item.color} />
                     <span>{item.name}</span>
@@ -191,7 +186,7 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
               dangerouslySetInnerHTML={{ __html: plot[1].description }}
               highlightColor="#cab8a0"
             />
-            <TreePlot imagePath={`/src/assets/plots/expatriateTree/tree.webp`} />
+            <TreePlot imagePath={plot[1]?.image ?? ''} />
           </ModalContent>
         </SwiperSlide>
 
@@ -225,7 +220,7 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
             style={{ fontSize: "1.5rem" }}
           />
           <Plot
-            imagePath={`/src/assets/plots/bornRoot/root.webp`}
+            imagePath={plot[2]?.image ?? ''}
             width="62.5rem"
             height="31.25rem"
           />
@@ -239,7 +234,7 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
               style={{ fontSize: "1.5rem" }}
             />
             <RootPlot
-              imagePath={`/src/assets/plots/residentRoot/root.webp`}
+              imagePath={plot[3]?.image ?? ''}
             />
           </ModalContent>
         </SwiperSlide>
@@ -247,16 +242,15 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
         <SwiperSlide style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
           alignItems: "center",
-          gap: "1.25rem",
+          gap: "2.25rem",
         }}>
           <ModalText
             dangerouslySetInnerHTML={{ __html: plot[4].description }}
             highlightColor="#cab8a0"
             style={{ margin: "0 12.5rem" }}
           />
-          <Plot imagePath={`/src/assets/plots/positivityTree/tree.webp`} />
+          <Plot imagePath={plot[4]?.image ?? ''} />
         </SwiperSlide>
       </Swiper>
       <SkipButton onClick={() => navigate("/map")}>

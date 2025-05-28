@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
+import map from "../../assets/images/map.png";
 
 export const HowToNavigateContainer = styled.main`
   width: 100vw;
@@ -10,7 +11,7 @@ export const HowToNavigateContainer = styled.main`
 export const HowToNavigateBackground = styled.div`
   width: 100%;
   height: 100%;
-  background-image: url("/src/assets/images/map.png");
+  background-image: url(${map});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
