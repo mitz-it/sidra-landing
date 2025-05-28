@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { theme } from "../../styles/theme";
+import svg from "../../assets/svg/Loading.svg"
 
 
 const move = keyframes`
@@ -27,8 +28,8 @@ export const LoadingAnimatedSvg = styled.div`
   background: linear-gradient(90deg, ${theme.colors.cream}, ${theme.colors.lightCream}, ${theme.colors.lightCream}, ${theme.colors.cream});
   background-size: 200% 100%;
   animation: ${move} 4s linear infinite;
-  -webkit-mask-image: url("/src/assets/svg/Loading.svg"); /* ou use o SVG inline como abaixo */
-  mask-image: url("/src/assets/svg/Loading.svg");
+  -webkit-mask-image: url(${svg});
+  mask-image: url(${svg});
   mask-size: contain;
   mask-repeat: no-repeat;
   mask-position: center;
