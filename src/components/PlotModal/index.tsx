@@ -21,6 +21,7 @@ import { Mousewheel, Scrollbar, Keyboard } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from "react-router-dom";
 import { PinIcon } from "../../assets/svg/PinIcon";
+import { LanguageTreePlot } from "../../assets/svg/LanguageTreePlot";
 
 interface PlotModalProps {
   setCurrentSlide: (slide: number) => void;
