@@ -13,12 +13,13 @@ type PopoverProps = {
   id: string;
   name: string;
   axisX: "left" | "right";
-  axisY: "top" | "bottom" ;
+  axisY: "top" | "bottom";
   nameOrigin: string;
   title: string;
   text: string;
   isOpen: string;
   setIsOpen: (value: string) => void;
+  hasName?: boolean;
 };
 
 const Popover: React.FC<PopoverProps> = ({
@@ -31,28 +32,28 @@ const Popover: React.FC<PopoverProps> = ({
   text,
   isOpen,
   setIsOpen,
+  hasName = true,
 }) => {
-    const open = !!(isOpen === id);
+  const open = !!(isOpen === id);
 
-    const popoverRef = useRef<HTMLDivElement>(null);
+  const popoverRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-      const handleClickOutside = (event: MouseEvent) => {
-        if (
-          popoverRef.current &&
-          event.target instanceof Node &&
-          !popoverRef.current.contains(event.target)
-        ) {
-          setIsOpen('');
-        }
-      };
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        popoverRef.current &&
+        event.target instanceof Node &&
+        !popoverRef.current.contains(event.target)
+      ) {
+        setIsOpen("");
+      }
+    };
 
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, [setIsOpen]);
-
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [setIsOpen]);
 
   return (
     <div style={{ position: "relative" }}>
@@ -79,9 +80,11 @@ const Popover: React.FC<PopoverProps> = ({
             </svg>
           </MapPopoverHeader>
 
-          <MapPopoverSubTitle>
-            <b>“{name}”</b> - {nameOrigin}
-          </MapPopoverSubTitle>
+          {hasName ? (
+            <MapPopoverSubTitle>
+              <b>“{name}”</b> - {nameOrigin}
+            </MapPopoverSubTitle>
+          ) : null}
           <MapPopoverDivider />
           <MapPopoverText>{text}</MapPopoverText>
         </MapPopover>
