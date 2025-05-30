@@ -11,18 +11,6 @@ import {
 } from "./Popover.styles";
 import { AudioIcon } from "../../../assets/svg/AudioIcon";
 
-import amharic from "../../../assets/audios/Amharic.m4a";
-// import arabic from "../../../assets/audios/Arabic.m4a";
-// import bangla from "../../../assets/audios/Bangla.m4a";
-// import english from "../../../assets/audios/English.m4a";
-// import hindi from "../../../assets/audios/Hindi.mp3";
-// import nepali from "../../../assets/audios/Nepali.m4a";
-// import persian1 from "../../../assets/audios/Persian1.m4a";
-// import persian2 from "../../../assets/audios/Persian2.m4a";
-// import tagalog from "../../../assets/audios/Tagalog.m4a";
-// import tamil from "../../../assets/audios/Tamil.m4a";
-// import urdu from "../../../assets/audios/Urdu.mp3";
-
 type PopoverProps = {
   id: string;
   name: string;
@@ -110,7 +98,7 @@ const Popover: React.FC<PopoverProps> = ({
           <MapPopoverText>{text}</MapPopoverText>
         </MapPopover>
       )}
-      <audio ref={audioRef} src={amharic} style={{ display: "none" }} />
+      <audio ref={audioRef} src={''} style={{ display: "none" }} />
     </div>
   );
 };
