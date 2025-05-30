@@ -94,6 +94,16 @@ export const WhoWeAreCard = styled.div`
   overflow: hidden;
   position: relative;
 
+  @media screen and (max-width: 1608px) {
+    height: 17.75rem;
+    width: 12.5rem;
+  }
+
+  @media screen and (max-width: 1500px) {
+    height: 16.75rem;
+    width: 11.5rem;
+  }
+
   img {
     object-fit: cover;
     height: 100%;
