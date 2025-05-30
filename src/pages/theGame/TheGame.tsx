@@ -18,8 +18,30 @@ import {
 import Cards from "../../assets/images/cards.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Scrollbar, Keyboard } from "swiper/modules";
+import PDFOnline from "../../assets/pdf/Online-Manual+Cards.pdf";
+import PDFPrint from "../../assets/pdf/Print-Manual+Cards.pdf";
 
 export default function TheGame() {
+  const handleDownloadOnlineVersion = () => {
+    const pdfUrl = PDFOnline;
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "The_Sidra_Game_Online_Version.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleDownloadPrintVersion = () => {
+    const pdfUrl = PDFPrint;
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "The_Sidra_Game_Print_Version.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <TheGameContainer>
       <Swiper
@@ -62,7 +84,7 @@ export default function TheGame() {
               ).
             </TheGameLicense>
             <TheGameButtonContainer>
-              <TheGameButton>
+              <TheGameButton onClick={handleDownloadPrintVersion}>
                 <svg
                   style={{ width: "2.625rem", height: "2.875rem" }}
                   viewBox="0 0 42 46"
@@ -83,7 +105,7 @@ export default function TheGame() {
                   </TheGameButtonTextSecondary>
                 </TheGameButtonTextContainer>
               </TheGameButton>
-              <TheGameButton>
+              <TheGameButton onClick={handleDownloadOnlineVersion}>
                 <svg
                   style={{ width: "2.625rem", height: "2.875rem" }}
                   viewBox="0 0 42 46"
