@@ -30,7 +30,7 @@ export const WhoWeAreTitle = styled.h1`
 export const WhoWeAreText = styled.p`
   font-family: "Zarathustra", sans-serif;
   color: ${theme.colors.white};
-  font-size: 2.625rem;
+  font-size: 2.5rem;
   text-align: center;
   max-width: 78.313rem;
 `;
@@ -56,14 +56,14 @@ export const WhoWeAreTeamPage = styled.section`
   flex-direction: column;
   justify-content: center;
   padding-bottom: 7rem;
+  align-items: center;
 `;
 
 export const WhoWeAreTeamContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-inline: 15rem;
-  max-width: 49.75rem;
+  margin-inline: 7rem;
 `;
 
 export const WhoWeAreTeamTitle = styled.h1`
@@ -81,6 +81,7 @@ export const WhoWeAreTeamText = styled.p`
   color: ${theme.colors.white};
   font-size: 2rem;
   font-weight: 400;
+  max-width: 49.75rem;
 `;
 
 export const WhoWeAreCard = styled.div`
@@ -136,7 +137,6 @@ export const WhoWeAreTeam = styled.div`
   display: flex;
   justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap;
 `;
 
 export const WhoWeAreTeamAside = styled.div`
@@ -144,5 +144,6 @@ export const WhoWeAreTeamAside = styled.div`
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
-  height: 100%;
+  max-width: 93.75rem;
+  width: 100%;
 `;
