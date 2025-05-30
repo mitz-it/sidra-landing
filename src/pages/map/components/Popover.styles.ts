@@ -62,6 +62,14 @@ export const MapPopoverTitle = styled.p`
   font-size: 3.75rem;
   font-weight: 700;
   line-height: 120%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+`;
+
+export const SVGWrapper = styled.div`
+  cursor: pointer;
 `;
 
 export const MapPopoverSubTitle = styled.p`

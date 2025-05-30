@@ -7,7 +7,21 @@ import {
   MapPopoverSubTitle,
   MapPopoverText,
   MapPopoverTitle,
+  SVGWrapper,
 } from "./Popover.styles";
+import { AudioIcon } from "../../../assets/svg/AudioIcon";
+
+import amharic from "../../../assets/audios/Amharic.m4a";
+// import arabic from "../../../assets/audios/Arabic.m4a";
+// import bangla from "../../../assets/audios/Bangla.m4a";
+// import english from "../../../assets/audios/English.m4a";
+// import hindi from "../../../assets/audios/Hindi.mp3";
+// import nepali from "../../../assets/audios/Nepali.m4a";
+// import persian1 from "../../../assets/audios/Persian1.m4a";
+// import persian2 from "../../../assets/audios/Persian2.m4a";
+// import tagalog from "../../../assets/audios/Tagalog.m4a";
+// import tamil from "../../../assets/audios/Tamil.m4a";
+// import urdu from "../../../assets/audios/Urdu.mp3";
 
 type PopoverProps = {
   id: string;
@@ -20,6 +34,7 @@ type PopoverProps = {
   isOpen: string;
   setIsOpen: (value: string) => void;
   hasName?: boolean;
+  audio?: string;
 };
 
 const Popover: React.FC<PopoverProps> = ({
@@ -37,6 +52,7 @@ const Popover: React.FC<PopoverProps> = ({
   const open = !!(isOpen === id);
 
   const popoverRef = useRef<HTMLDivElement>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -64,7 +80,12 @@ const Popover: React.FC<PopoverProps> = ({
       {open && (
         <MapPopover ref={popoverRef} axisX={axisX} axisY={axisY}>
           <MapPopoverHeader>
-            <MapPopoverTitle>{title}</MapPopoverTitle>
+            <MapPopoverTitle >
+              {title}
+              <SVGWrapper onClick={() => audioRef.current?.play()}>
+                <AudioIcon />
+              </SVGWrapper>
+            </MapPopoverTitle>
             <svg
               onClick={() => setIsOpen("")}
               style={{ height: "1.5rem", width: "1.5rem" }}
@@ -89,6 +110,7 @@ const Popover: React.FC<PopoverProps> = ({
           <MapPopoverText>{text}</MapPopoverText>
         </MapPopover>
       )}
+      <audio ref={audioRef} src={amharic} style={{ display: "none" }} />
     </div>
   );
 };
