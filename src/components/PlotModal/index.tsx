@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   InfoIcon,
   InfoTooltip,
@@ -31,6 +31,11 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
   const [activeSlide, setActiveSlide] = useState<number>(0);
   const [selectedNationality, setSelectedNationality] = useState<string>(fullTree);
   const [hovered, setHovered] = useState(false);
+
+  useEffect(() => {
+    setCurrentSlide(activeSlide);
+  }, [activeSlide, setCurrentSlide]);
+
   const getModalDimensions = () => {
     if (activeSlide === 0) return { height: "37.5rem", width: "62.5rem" };
     if (activeSlide === 1) return { height: "37.5rem", width: "43.75rem" };
@@ -47,7 +52,6 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
         keyboard={{ enabled: true }}
         onSlideChange={(swiper) => {
           setActiveSlide(swiper.activeIndex);
-          setCurrentSlide(swiper.activeIndex);
         }}
         onSwiper={(swiper) => setActiveSlide(swiper.activeIndex)}
         freeMode={true}
