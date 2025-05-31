@@ -82,7 +82,7 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
         >
           <SmallSpecialModalText>
             The <strong>places</strong> we visit <strong>root</strong> our
-            experiences. They carry themark of the <strong>people</strong> we
+            experiences. They carry the mark of the <strong>people</strong> we
             meet, the <strong>food</strong> we taste, and the{" "}
             <strong>memories</strong> we cherish.
           </SmallSpecialModalText>
