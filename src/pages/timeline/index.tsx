@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 import { PlotModal } from '../../components/PlotModal'
 import TimelineProgress from '../../components/TimelineProgress'
@@ -21,12 +21,8 @@ export const TimelineContainer = styled.div`
 `;
 
 export default function Timeline() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(1);
   const [isLocked, setIsLocked] = useState<boolean>(false);
-
-  useEffect(() => {
-    setCurrentSlide(0);
-  }, []);
 
   return (
     <Swiper
@@ -49,7 +45,7 @@ export default function Timeline() {
       </SwiperSlide>
       <SwiperSlide>
         <TimelineContainer>
-          <TimelineProgress currentSlide={currentSlide} />
+          <TimelineProgress currentSlide={currentSlide}/>
           <PlotModal setCurrentSlide={setCurrentSlide} />
         </TimelineContainer>
       </SwiperSlide>
