@@ -1,21 +1,29 @@
 import styled from "styled-components";
-import map from "../../assets/images/map.png";
+
+import { theme } from "../../styles/theme";
 
 export const MapContainer = styled.main`
   width: 100vw;
   height: 100vh;
-  position: relative;
+
+  background-color: ${theme.colors.cream};
+  display: flex;
+  justify-content: center;
 `;
 
 export const MapBackground = styled.div`
-  width: 100%;
   height: 100%;
-  background-image: url(${map});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
-  position: absolute;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
 `;
 
 export const MapButtonContainer = styled.div<{

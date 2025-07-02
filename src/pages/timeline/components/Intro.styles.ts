@@ -21,9 +21,14 @@ export const IntroText = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items:center;
-  position: absolute;
+  align-items: center;
 
-  bottom: 5rem;
+  margin-bottom: 5rem;
 `;
 
+export const IntroSVG = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+`;

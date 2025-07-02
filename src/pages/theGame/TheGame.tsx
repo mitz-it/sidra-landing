@@ -18,8 +18,8 @@ import {
 import Cards from "../../assets/images/cards.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Scrollbar, Keyboard } from "swiper/modules";
-import PDFOnline from "../../assets/pdf/Online-Manual+Cards.pdf";
-import PDFPrint from "../../assets/pdf/Print-Manual+Cards.pdf";
+import PDFOnline from "../../assets/pdf/Sidra-Binder-Online.pdf";
+import PDFPrint from "../../assets/pdf/Sidra-Binder-Print.pdf";
 
 export default function TheGame() {
   const handleDownloadOnlineVersion = () => {
