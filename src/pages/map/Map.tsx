@@ -5,6 +5,31 @@ import { MapBackground, MapButtonContainer, MapContainer } from "./Map.styles";
 import Popover from "./components/Popover";
 import FirstTimeModal from "../../components/FirstTimeModal";
 import MapImage from "../../assets/images/map.webp";
+import AbadayAudio from "../../assets/audios/Abaday.m4a";
+import AchcharuAudio from "../../assets/audios/Achcharu.m4a";
+import AddaAudio from "../../assets/audios/Adda.m4a";
+import AderaAudio from "../../assets/audios/Adera.m4a";
+import AjeebAudio from "../../assets/audios/Ajeeb.m4a";
+import ArameshAudio from "../../assets/audios/Aramesh.m4a";
+import AyzohAudio from "../../assets/audios/Ayzoh.m4a";
+import BayanihanAudio from "../../assets/audios/Bayanihan.m4a";
+import BhaiAudio from "../../assets/audios/Bhai.m4a";
+import BunnaAudio from "../../assets/audios/Bunna.m4a";
+import ChillAudio from "../../assets/audios/Chill.m4a";
+import CoolAudio from "../../assets/audios/Cool.m4a";
+import DostiAudio from "../../assets/audios/Dosti.mp3";
+import JugaadAudio from "../../assets/audios/Jugaad.mp3";
+import KataPataAudio from "../../assets/audios/KataPata.m4a";
+import KhiladiAudio from "../../assets/audios/Khiladi.mp3";
+import MahdoumAudio from "../../assets/audios/Mahdoum.m4a";
+import MujammalahAudio from "../../assets/audios/Mujammalah.m4a";
+import SajiloAudio from "../../assets/audios/Sajilo.m4a";
+import SandiganAudio from "../../assets/audios/Sandigan.m4a";
+import SukoonAudio from "../../assets/audios/Sukoon.mp3";
+import TarofAudio from "../../assets/audios/Tarof.m4a";
+import VibesAudio from "../../assets/audios/Vibes.m4a";
+import WastaAudio from "../../assets/audios/Wasta.m4a";
+import YalahwiAudio from "../../assets/audios/Yalahwi.m4a";
 
 export default function Map() {
   const [selected, setSelected] = useState("");
@@ -33,6 +58,7 @@ export default function Map() {
                 axisX="right"
                 axisY="top"
                 nameOrigin="Persian"
+                audio={ArameshAudio}
               />
             </MapButtonContainer>
 
@@ -47,6 +73,7 @@ export default function Map() {
                 axisX="right"
                 axisY="top"
                 nameOrigin="English"
+                audio={VibesAudio}
               />
               <Popover
                 id="Wasta"
@@ -58,6 +85,7 @@ export default function Map() {
                 axisX="right"
                 axisY="top"
                 nameOrigin="Arabic"
+                audio={WastaAudio}
               />
               <Popover
                 id="Bhai"
@@ -69,6 +97,7 @@ export default function Map() {
                 axisX="right"
                 axisY="top"
                 nameOrigin="Nepali"
+                audio={BhaiAudio}
               />
               <Popover
                 id="Dosti"
@@ -80,6 +109,7 @@ export default function Map() {
                 axisX="right"
                 axisY="top"
                 nameOrigin="Urdu"
+                audio={DostiAudio}
               />
             </MapButtonContainer>
 
@@ -94,6 +124,7 @@ export default function Map() {
                 axisX="right"
                 axisY="bottom"
                 nameOrigin="Arabic"
+                audio={MujammalahAudio}
               />
             </MapButtonContainer>
 
@@ -108,6 +139,7 @@ export default function Map() {
                 axisX="right"
                 axisY="bottom"
                 nameOrigin="English"
+                audio={CoolAudio}
               />
               <Popover
                 id="Ajeeb"
@@ -119,6 +151,7 @@ export default function Map() {
                 axisX="right"
                 axisY="bottom"
                 nameOrigin="Arabic"
+                audio={AjeebAudio}
               />
               <Popover
                 id="Yalahwi"
@@ -130,6 +163,7 @@ export default function Map() {
                 axisX="right"
                 axisY="bottom"
                 nameOrigin="Arabic"
+                audio={YalahwiAudio}
               />
             </MapButtonContainer>
 
@@ -159,6 +193,7 @@ export default function Map() {
                 axisX="left"
                 axisY="top"
                 nameOrigin="Amharic"
+                audio={BunnaAudio}
               />
               <Popover
                 id="Sandigan"
@@ -170,6 +205,7 @@ export default function Map() {
                 axisX="left"
                 axisY="top"
                 nameOrigin="Tagalog"
+                audio={SandiganAudio}
               />
               <Popover
                 id="Bayanihan"
@@ -181,6 +217,7 @@ export default function Map() {
                 axisX="left"
                 axisY="top"
                 nameOrigin="Tagalog"
+                audio={BayanihanAudio}
               />
             </MapButtonContainer>
 
@@ -195,6 +232,7 @@ export default function Map() {
                 axisX="left"
                 axisY="top"
                 nameOrigin="Amharic"
+                audio={AderaAudio}
               />
               <Popover
                 id="Ayzoh"
@@ -206,6 +244,7 @@ export default function Map() {
                 axisX="left"
                 axisY="top"
                 nameOrigin="Amharic"
+                audio={AyzohAudio}
               />
             </MapButtonContainer>
 
@@ -220,6 +259,7 @@ export default function Map() {
                 axisX="left"
                 axisY="top"
                 nameOrigin="Tamil"
+                audio={KataPataAudio}
               />
               <Popover
                 id="Jugaad"
@@ -231,6 +271,7 @@ export default function Map() {
                 axisX="left"
                 axisY="top"
                 nameOrigin="Hindi"
+                audio={JugaadAudio}
               />
               <Popover
                 id="Tarof"
@@ -244,6 +285,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                 axisX="left"
                 axisY="top"
                 nameOrigin="Persian"
+                audio={TarofAudio}
               />
             </MapButtonContainer>
 
@@ -258,6 +300,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                 axisX="left"
                 axisY="top"
                 nameOrigin="Arabic"
+                audio={AbadayAudio}
               />
             </MapButtonContainer>
 
@@ -272,6 +315,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                 axisX="left"
                 axisY="top"
                 nameOrigin="English"
+                audio={ChillAudio}
               />
               <Popover
                 id="Mahdoum"
@@ -283,6 +327,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                 axisX="left"
                 axisY="top"
                 nameOrigin="Arabic"
+                audio={MahdoumAudio}
               />
               <Popover
                 id="Sukoon"
@@ -294,6 +339,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                 axisX="left"
                 axisY="top"
                 nameOrigin="Urdu"
+                audio={SukoonAudio}
               />
               <Popover
                 id="Adda"
@@ -305,6 +351,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                 axisX="left"
                 axisY="top"
                 nameOrigin="Bangla"
+                audio={AddaAudio}
               />
             </MapButtonContainer>
 
@@ -319,6 +366,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                 axisX="left"
                 axisY="bottom"
                 nameOrigin="Hindi"
+                audio={KhiladiAudio}
               />
               <Popover
                 id="Achcharu"
@@ -330,6 +378,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                 axisX="left"
                 axisY="bottom"
                 nameOrigin="Tamil"
+                audio={AchcharuAudio}
               />
               <Popover
                 id="Sajilo"
@@ -341,6 +390,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                 axisX="left"
                 axisY="bottom"
                 nameOrigin="Nepali"
+                audio={SajiloAudio}
               />
             </MapButtonContainer>
             <BottomNavigation />
