@@ -27,36 +27,18 @@
   font-style: normal;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1440px), screen and (max-height: 900px) {
   html {
     font-size: 90%!important;
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1280px), screen and (max-height: 760px) {
   html {
     font-size: 75%!important;
   }
 }
 
-@media screen and (max-width: 1024px) {
-  html {
-    font-size: 50%!important;
-  }
-}
-
-
-@media screen and (max-height: 900px) {
-  html {
-    font-size: 90%!important;
-  }
-}
-
-@media screen and (max-height: 760px) {
-  html {
-    font-size: 75%!important;
-  }
-}
 
 @media screen and (max-height: 650px) {
   html {
@@ -64,8 +46,10 @@
   }
 }
 
-@media screen and (max-height: 550px) {
+
+@media screen and (max-width: 1024px), screen and (max-height: 550px){
   html {
     font-size: 50%!important;
   }
 }
+

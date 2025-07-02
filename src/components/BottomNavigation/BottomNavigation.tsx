@@ -21,6 +21,7 @@ const BottomNavigation: React.FC = () => {
       <BottomNavigationItem
         onClick={() => navigate("/map")}
         isActive={location.pathname === "/map"}
+        aria-label="map"
       >
         <svg
           style={{ width: "1.875rem", height: "2.313rem" }}
@@ -50,6 +51,7 @@ const BottomNavigation: React.FC = () => {
       <BottomNavigationItem
         onClick={() => navigate("/how-to-navigate")}
         isActive={location.pathname === "/how-to-navigate"}
+        aria-label="how-to-navigate"
       >
         <svg
           style={{ width: "1.269rem", height: "2.269rem" }}

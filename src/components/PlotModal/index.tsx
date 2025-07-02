@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
   InfoIcon,
+  InfoText,
   InfoTooltip,
   Modal,
   ModalContent,
@@ -29,7 +30,8 @@ interface PlotModalProps {
 export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
   const navigate = useNavigate();
   const [activeSlide, setActiveSlide] = useState<number>(0);
-  const [selectedNationality, setSelectedNationality] = useState<string>(fullTree);
+  const [selectedNationality, setSelectedNationality] =
+    useState<string>(fullTree);
   const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
@@ -73,7 +75,7 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
             It is a living canopy of experiences—a connection of people,
             cultures, and shared memories.
           </SmallSpecialModalText>
-            <PinIcon width={100} height={100} />
+          <PinIcon width={100} height={100} />
         </SwiperSlide>
 
         <SwiperSlide
@@ -95,8 +97,8 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
           </SmallSpecialModalTitle>
           <SmallSpecialModalText>
             What places come to your mind? Who are the people sharing that
-            moment with you? Which words would you use to describe this
-            feeling? And in which language would you say them?
+            moment with you? Which words would you use to describe this feeling?
+            And in which language would you say them?
           </SmallSpecialModalText>
         </SwiperSlide>
 
@@ -118,11 +120,13 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
           </SmallSpecialModalText>
         </SwiperSlide>
 
-        <SwiperSlide style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}>
+        <SwiperSlide
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <div
             style={{
               display: "flex",
@@ -151,11 +155,9 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
               </InfoTooltip>
             )}
           </div>
-          <LanguageTreePlot/>
-          <ModalContent>
-          
-            {/* <LanguageTreePlot /> */}
-          </ModalContent>
+          <InfoText>Hovering the label shows a popup.</InfoText>
+          <LanguageTreePlot />
+          <ModalContent>{/* <LanguageTreePlot /> */}</ModalContent>
         </SwiperSlide>
 
         <SwiperSlide>
@@ -163,9 +165,7 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
             <ModalText
               dangerouslySetInnerHTML={{ __html: plot[0].description }}
             />
-            <Plot
-              imagePath={selectedNationality}
-            >
+            <Plot imagePath={selectedNationality}>
               <PlotLegendContainer>
                 <strong>Nationalities:</strong>
                 {nationalities.map((item) => (
@@ -179,8 +179,8 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
                     <span>{item.percent}</span>
                   </PlotLegendItem>
                 ))}
-                </PlotLegendContainer>
-              </Plot>
+              </PlotLegendContainer>
+            </Plot>
           </ModalContent>
         </SwiperSlide>
 
@@ -190,7 +190,7 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
               dangerouslySetInnerHTML={{ __html: plot[1].description }}
               highlightColor="#cab8a0"
             />
-            <TreePlot imagePath={plot[1]?.image ?? ''} />
+            <TreePlot imagePath={plot[1]?.image ?? ""} />
           </ModalContent>
         </SwiperSlide>
 
@@ -203,28 +203,29 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
         >
           <SmallSpecialModalText>
             Yet, for many, their contributions coexist without{" "}
-            <strong>limited rights:</strong> no permanent residency,
-            restricted access to healthcare, and citizenship that remains
-            unattainable without a{" "}
-            <strong>direct Kuwaiti paternal bloodline</strong>—even for those
-            born in Kuwait, who may not know any other home.
+            <strong>limited rights:</strong> no permanent residency, restricted
+            access to healthcare, and citizenship that remains unattainable
+            without a <strong>direct Kuwaiti paternal bloodline</strong>—even
+            for those born in Kuwait, who may not know any other home.
           </SmallSpecialModalText>
         </SwiperSlide>
 
-        <SwiperSlide style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "1.25rem",
-        }}>
+        <SwiperSlide
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "1.25rem",
+          }}
+        >
           <ModalText
             dangerouslySetInnerHTML={{ __html: plot[2].description }}
             highlightColor="#FC9918"
             style={{ fontSize: "1.5rem" }}
           />
           <Plot
-            imagePath={plot[2]?.image ?? ''}
+            imagePath={plot[2]?.image ?? ""}
             width="62.5rem"
             height="31.25rem"
           />
@@ -237,24 +238,24 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
               highlightColor="#FC9918"
               style={{ fontSize: "1.5rem" }}
             />
-            <RootPlot
-              imagePath={plot[3]?.image ?? ''}
-            />
+            <RootPlot imagePath={plot[3]?.image ?? ""} />
           </ModalContent>
         </SwiperSlide>
 
-        <SwiperSlide style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "2.25rem",
-        }}>
+        <SwiperSlide
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "2.25rem",
+          }}
+        >
           <ModalText
             dangerouslySetInnerHTML={{ __html: plot[4].description }}
             highlightColor="#cab8a0"
             style={{ margin: "0 12.5rem" }}
           />
-          <Plot imagePath={plot[4]?.image ?? ''} />
+          <Plot imagePath={plot[4]?.image ?? ""} />
         </SwiperSlide>
       </Swiper>
       <SkipButton onClick={() => navigate("/map")}>

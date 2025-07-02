@@ -18,7 +18,7 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Scrollbar, Keyboard } from "swiper/modules";
 
-import oddLogo from "../../assets/images/odd_logo.png";
+import oddLogo from "../../assets/images/odd_logo.webp";
 import bruno from "../../assets/images/PlayspaceTeam/Bruno_Setola.jpg";
 import playSpaceLogo from "../../assets/images/PlayspaceTeam/PlayspaceLogo.png";
 import giuliana from "../../assets/images/en.vTeam/Giuliana_Lomonaco.jpg";

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
-import map from "../../assets/images/map.png";
+import map from "../../assets/images/map.webp";
 
 export const HowToNavigateContainer = styled.main`
   width: 100vw;

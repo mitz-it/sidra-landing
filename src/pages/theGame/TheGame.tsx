@@ -15,7 +15,7 @@ import {
   TheGameText,
   TheGameTitle,
 } from "./TheGame.styles";
-import Cards from "../../assets/images/cards.png";
+import Cards from "../../assets/images/cards.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Scrollbar, Keyboard } from "swiper/modules";
 import PDFOnline from "../../assets/pdf/Sidra-Binder-Online.pdf";

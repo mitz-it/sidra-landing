@@ -4,7 +4,7 @@ import BottomNavigation from "../../components/BottomNavigation";
 import { MapBackground, MapButtonContainer, MapContainer } from "./Map.styles";
 import Popover from "./components/Popover";
 import FirstTimeModal from "../../components/FirstTimeModal";
-import MapImage from "../../assets/images/map.png";
+import MapImage from "../../assets/images/map.webp";
 
 export default function Map() {
   const [selected, setSelected] = useState("");
@@ -17,7 +17,7 @@ export default function Map() {
   return (
     <MapContainer>
       <MapBackground>
-        <img src={MapImage} alt="Map" />
+        <img src={MapImage} fetchPriority="high" alt="Map" />
         {firstTime ? (
           <FirstTimeModal setIsOpen={handleCloseModal} />
         ) : (
