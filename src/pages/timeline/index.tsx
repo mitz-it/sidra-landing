@@ -18,6 +18,7 @@ export const TimelineContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 160px 164px;
+  position: relative;
 `;
 
 export default function Timeline() {

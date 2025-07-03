@@ -8,7 +8,7 @@ export const StoriesContainer = styled.div`
   justify-content: center;
   gap: 16px;
   top: 2rem;
-  position: fixed;
+  position: absolute;
   z-index: 1000;
 `;
 export const ProgressBar = styled.div<{ idx: number; currentSlide: number }>`
