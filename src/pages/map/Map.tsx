@@ -5,6 +5,8 @@ import { MapBackground, MapButtonContainer, MapContainer } from "./Map.styles";
 import Popover from "./components/Popover";
 import FirstTimeModal from "../../components/FirstTimeModal";
 import MapImage from "../../assets/images/map.webp";
+
+//Audios
 import AbadayAudio from "../../assets/audios/Abaday.m4a";
 import AchcharuAudio from "../../assets/audios/Achcharu.m4a";
 import AddaAudio from "../../assets/audios/Adda.m4a";

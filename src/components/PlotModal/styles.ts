@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { theme } from "../../styles/theme";
 
 export const Modal = styled.div<{
   dimensions?: { height: string; width: string };
@@ -169,6 +170,26 @@ export const SkipButton = styled.div`
   left: 1.25rem;
   bottom: 1.25rem;
   cursor: pointer;
+`;
+
+export const MapButton = styled.button`
+  background: ${theme.colors.yellow};
+  font-family: "Overused Grotesk", sans-serif;
+  font-size: 1.8rem;
+  border: 1px solid ${theme.colors.black};
+  border-radius: 1.125rem;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  color: ${theme.colors.black};
+  transition: background 0.3s;
+  box-shadow: 0px 4px 0px 0px ${theme.colors.black};
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
 `;
 
 export const InfoIcon = styled.div`

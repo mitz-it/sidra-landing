@@ -3,6 +3,7 @@ import {
   InfoIcon,
   InfoText,
   InfoTooltip,
+  MapButton,
   Modal,
   ModalContent,
   ModalText,
@@ -253,14 +254,16 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
           <ModalText
             dangerouslySetInnerHTML={{ __html: plot[4].description }}
             highlightColor="#cab8a0"
-            style={{ margin: "0 12.5rem" }}
+            style={{ width: "58.768rem" }}
           />
           <Plot imagePath={plot[4]?.image ?? ""} />
         </SwiperSlide>
       </Swiper>
-      <SkipButton onClick={() => navigate("/map")}>
-        {activeSlide === 9 ? "Visit map" : "Skip the intro"}
-      </SkipButton>
+      {activeSlide === 9 ? (
+        <MapButton onClick={() => navigate("/map")}>Visit map</MapButton>
+      ) : (
+        <SkipButton onClick={() => navigate("/map")}>Skip the intro</SkipButton>
+      )}
     </Modal>
   );
 };
