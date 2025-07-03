@@ -15,7 +15,7 @@ export const MapPopoverButton = styled.button<{ isActive?: boolean }>`
   font-size: 1.125rem;
   border-radius: 2rem;
   transition: background 0.5s;
-
+  z-index: 9999;
   &:hover {
     background-color: ${theme.colors.blue};
     color: ${theme.colors.cream};

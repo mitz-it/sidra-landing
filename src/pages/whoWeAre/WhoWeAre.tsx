@@ -18,7 +18,7 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Scrollbar, Keyboard } from "swiper/modules";
 
-import oddLogo from "../../assets/images/odd_logo.png";
+import oddLogo from "../../assets/images/odd_logo.webp";
 import bruno from "../../assets/images/PlayspaceTeam/Bruno_Setola.jpg";
 import playSpaceLogo from "../../assets/images/PlayspaceTeam/PlayspaceLogo.png";
 import giuliana from "../../assets/images/en.vTeam/Giuliana_Lomonaco.jpg";
@@ -39,26 +39,32 @@ export default function WhoWeAre() {
     {
       image: hafsa,
       name: "Hafsa Omer",
+      job: "Educational Advisor",
     },
     {
       image: irfana,
       name: "Irfana Nasir",
+      job: "Educator and Phonics Trainer",
     },
     {
       image: israa,
       name: "Israa Naeem",
+      job: "Occupational Therapist",
     },
     {
       image: khalil,
       name: "Khalil Changhouri",
+      job: "High School Student",
     },
     {
       image: lynn,
       name: "Lynn Pais",
+      job: "Anthropology Student | Cultural Researcher",
     },
     {
       image: taha,
       name: "Taha Banatwala",
+      job: "Occupational Therapist",
     },
   ];
   return (
@@ -77,18 +83,10 @@ export default function WhoWeAre() {
           <WhoWeArePageOne>
             <WhoWeAreTitle>who we are</WhoWeAreTitle>
             <WhoWeAreText>
-              We are a multicultural group of educators, researchers, and
-              students passionate about understanding the dynamics, narratives,
-              and beliefs that shape Kuwait’s shared culture. Committed to
-              increasing the sense of belonging and empathy in our communities,
-              we embarked on the Sidra journey to explore ways in which we can
-              all feel more welcomed in this culturally diverse land that we all
-              call home.
-              <br /> The project emerged as a pilot initiative of Aswatna’s
-              Ideathon, a gathering of key stakeholders in Kuwait’s education
-              sector dedicated to developing learning toolkits that transform
-              educational environments into more inclusive, adaptive, and
-              empowering spaces.
+              Sidra emerged as a pilot initiative of Aswatna’s Ideathon, a
+              gathering of key stakeholders who came together to explore ways to
+              transform Kuwait's educational environments into more inclusive,
+              adaptive, and empowering spaces.
             </WhoWeAreText>
             <WhoWeAreTextScrollContainer>
               <WhoWeAreTextSecondary>
@@ -114,7 +112,7 @@ export default function WhoWeAre() {
             <WhoWeAreTeamAside>
               <WhoWeAreTeamContainer>
                 <WhoWeAreTeamTitle>
-                  en.v team
+                  Sidra team
                   <svg
                     style={{ width: "3.375rem", height: "2.25rem" }}
                     viewBox="0 0 54 36"
@@ -143,11 +141,12 @@ export default function WhoWeAre() {
                     </defs>
                   </svg>
                 </WhoWeAreTeamTitle>
-                <WhoWeAreTeamText>
-                  Lorem ipsum dolor sit amet consectetur. Vel aliquam tortor
-                  volutpat malesuada. Sed pellentesque nisi elementum porta
-                  orci. Ipsum facilisis tincidunt sit lorem tristique neque a
-                  aenean nisl.
+                <WhoWeAreTeamText width="68.625rem">
+                  We are a multicultural group of educators, researchers, and
+                  students passionate about understanding the dynamics,
+                  narratives, and beliefs that shape Kuwait’s shared culture,
+                  and committed to increasing the sense of belonging and empathy
+                  in our communities.
                 </WhoWeAreTeamText>
               </WhoWeAreTeamContainer>
             </WhoWeAreTeamAside>
@@ -268,7 +267,7 @@ export default function WhoWeAre() {
                 <br />
                 <WhoWeAreTeamText>
                   Team Members: Leticia Ange Pozza, Giulia Tagliente, Sara
-                  Normanni, Barbara Diniz, Italo Oliveira
+                  Normanni, Barbara Diniz, Henrique Pozza, Ashley Nascimento.
                 </WhoWeAreTeamText>
               </WhoWeAreTeamContainer>
               <WhoWeAreCard>

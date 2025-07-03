@@ -36,6 +36,7 @@ const Popover: React.FC<PopoverProps> = ({
   isOpen,
   setIsOpen,
   hasName = true,
+  audio,
 }) => {
   const open = !!(isOpen === id);
 
@@ -68,11 +69,13 @@ const Popover: React.FC<PopoverProps> = ({
       {open && (
         <MapPopover ref={popoverRef} axisX={axisX} axisY={axisY}>
           <MapPopoverHeader>
-            <MapPopoverTitle >
+            <MapPopoverTitle>
               {title}
-              <SVGWrapper onClick={() => audioRef.current?.play()}>
-                <AudioIcon />
-              </SVGWrapper>
+              {audio && (
+                <SVGWrapper onClick={() => audioRef.current?.play()}>
+                  <AudioIcon />
+                </SVGWrapper>
+              )}
             </MapPopoverTitle>
             <svg
               onClick={() => setIsOpen("")}
@@ -98,7 +101,7 @@ const Popover: React.FC<PopoverProps> = ({
           <MapPopoverText>{text}</MapPopoverText>
         </MapPopover>
       )}
-      <audio ref={audioRef} src={''} style={{ display: "none" }} />
+      <audio ref={audioRef} src={audio} style={{ display: "none" }} />
     </div>
   );
 };

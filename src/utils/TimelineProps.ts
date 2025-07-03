@@ -40,20 +40,23 @@ export const plot = [
     title: "Plot 3",
     plotType: plotEnum.ROOT,
     image: bornRoot,
-    description: "In fact, among those <strong>born in the country, 41% are not considered Kuwaitis citizens.</strong> This disparity is reflected in <strong>people's expressed sense of belonging and in how they feel treated based on their nationality.</strong> In a survey conducted by our team, Kuwaitis reported a stronger <mark>sense of belonging</mark> and fairness in treatment compared to Non Kuwaitis."
+    description:
+      "In fact, among those <strong>born in the country, 41% are not considered Kuwaiti citizens.</strong> This disparity is reflected in <strong>people's expressed sense of belonging and in how they feel treated based on their nationality.</strong> In a survey conducted by our team, Kuwaitis reported a stronger <mark>sense of belonging</mark> and fairness in treatment compared to Non Kuwaitis.",
   },
   {
     title: "Plot 4",
     plotType: plotEnum.ROOT,
     image: residentRoot,
-    description: "At the same time, <strong>non-Kuwaiti participants</strong> in the survey—<strong>both those born in the country and those who were not—</strong>reported <mark style='background-color:#5f939a; color: white'>more negative experiences</mark> in public spaces and expressed a weaker connection to Kuwait, partly because they don't always feel <mark style='color: white'>ethnically welcomed.</mark>"
+    description:
+      "At the same time, <strong>non-Kuwaiti participants</strong> in the survey—<strong>both those born in the country and those who were not—</strong>reported <mark style='background-color:#5f939a; color: white'>more negative experiences</mark> in public spaces and expressed a weaker connection to Kuwait, partly because they don't always feel <mark style='color: white'>ethnically welcomed.</mark>",
   },
   {
     title: "Plot 5",
     plotType: plotEnum.TREE,
     image: positivityTree,
-    description: "Despite this, <mark style='background-color:#FC9918; color: white'>80%</mark> <strong>of all respondents</strong> - Kuwaitis and residents - agree they have <mark style='background-color:#FC9918; color: white'>positive memories</mark> of living in Kuwait. Each memory is tied to their ethnicity, family, and their personal story, making Kuwait a shared <strong>Map of Memories</strong>."
-  }
+    description:
+      "Despite this, <mark style='background-color:#FC9918; color: white'>80%</mark> <strong>of all respondents</strong> - Kuwaitis and residents - agree they have <mark style='background-color:#FC9918; color: white'>positive memories</mark> of living in Kuwait. Each memory is tied to their ethnicity, family, and their personal story, making Kuwait a shared <strong>Map of Memories</strong>.",
+  },
 ];
 
 export const fullTree = tree;

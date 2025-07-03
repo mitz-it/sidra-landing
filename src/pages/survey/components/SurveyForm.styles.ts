@@ -178,11 +178,12 @@ export const SubmitButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 4rem;
+  gap: 2rem;
 `;
 
-export const SubmitButton = styled.button<{ isActive?: boolean }>`
+export const CancelButton = styled.button<{ isActive?: boolean }>`
   background: ${({ isActive }) =>
-    isActive ? theme.colors.yellow : theme.colors.yellow};
+    isActive ? theme.colors.yellow : theme.colors.cream};
   font-family: "Overused Grotesk", sans-serif;
   font-size: 1.8rem;
   border: 1px solid ${theme.colors.black};
@@ -197,7 +198,28 @@ export const SubmitButton = styled.button<{ isActive?: boolean }>`
   font-weight: 500;
 
   &:hover {
-    background: ${theme.colors.yellow};
+    filter: brightness(0.8);
+  }
+`;
+
+export const SubmitButton = styled.button<{ isActive?: boolean }>`
+  background: ${({ isActive }) =>
+    isActive ? theme.colors.yellow : theme.colors.yellow};
+  font-family: "Overused Grotesk", sans-serif;
+  font-size: 1.8rem;
+  border: 1px solid ${theme.colors.black};
+  border-radius: 1.125rem;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  color: ${theme.colors.black};
+  transition: background 0.3s;
+  box-shadow: 0px 4px 0px 0px ${theme.colors.black};
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+
+  &:hover {
+    filter: brightness(0.8);
   }
 `;
 

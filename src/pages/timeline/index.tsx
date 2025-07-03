@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { PlotModal } from '../../components/PlotModal'
 import TimelineProgress from '../../components/TimelineProgress'
-import backgroundImage from "../../assets/images/background_timeline.png";
+import backgroundImage from "../../assets/images/background_timeline.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Scrollbar, Keyboard } from "swiper/modules";
 import Intro from "./components/Intro";

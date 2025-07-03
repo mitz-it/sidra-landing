@@ -81,8 +81,10 @@ export default function About() {
               </p>
               <p>Do you want to help us in this mission?</p>
               <p>
-                <a href="https://example.com">Click here</a> to answer a few
-                questions.
+                <a href="https://example.com" aria-label="Click here">
+                  Click here
+                </a>{" "}
+                to answer a few questions.
               </p>
             </AboutEllipseText>
           </AboutPageTwo>

@@ -209,3 +209,12 @@ export const InfoTooltip = styled.div`
   text-align: left;
   pointer-events: none;
 `;
+
+
+export const InfoText = styled.p`
+  text-align: left;
+  font-family: "Overused Grotesk", sans-serif;
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+`;

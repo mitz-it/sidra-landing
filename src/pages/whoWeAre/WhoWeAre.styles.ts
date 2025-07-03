@@ -13,10 +13,10 @@ export const WhoWeArePageOne = styled.section`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 `;
 
 export const WhoWeAreTitle = styled.h1`
@@ -76,12 +76,12 @@ export const WhoWeAreTeamTitle = styled.h1`
   gap: 1rem;
 `;
 
-export const WhoWeAreTeamText = styled.p`
+export const WhoWeAreTeamText = styled.p<{ width?: string }>`
   font-family: "Zarathustra", sans-serif;
   color: ${theme.colors.white};
   font-size: 2rem;
   font-weight: 400;
-  max-width: 49.75rem;
+  max-width: ${({ width }) => width || "49.75rem"};
 `;
 
 export const WhoWeAreCard = styled.div`

@@ -18,6 +18,7 @@ export const AboutPageOne = styled.section`
   align-items: center;
   gap: 2rem;
   padding-bottom: 7rem;
+  overflow: hidden;
 `;
 
 export const AboutTitle = styled.h1`
@@ -52,6 +53,7 @@ export const AboutPageTwo = styled.section`
   align-items: center;
   gap: 1rem;
   padding-bottom: 7rem;
+  overflow: hidden;
 `;
 
 export const AboutEllipseContainer = styled.div`

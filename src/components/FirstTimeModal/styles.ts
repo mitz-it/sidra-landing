@@ -1,13 +1,13 @@
 import { styled } from "styled-components";
 
 export const Modal = styled.div`
-  position: fixed;
+  position: absolute;
   top: 40%;
   left: 70%;
   transform: translate(-50%, -50%);
   padding: 2.5rem;
   z-index: 1000;
-  max-width: 700px;
+  max-width: 43.75rem;
   border-radius: 20px;
   border: 0.5px solid #00171f;
   background: #fff8f1;

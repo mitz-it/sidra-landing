@@ -56,7 +56,23 @@ export const SurveyPageTwo = styled.section`
   width: 100vw;
   height: 100%;
   overflow-y: scroll;
-  padding: 7rem 10rem 7rem 10rem;
   background-color: ${theme.colors.cream};
+  padding: 4rem;
+
+  form {
+    padding: 3rem 6rem 3rem 6rem;
+  }
 `;
 
+export const FormCloseButton = styled.div`
+  display: flex;
+  justify-content: flex-end;
+
+  svg {
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+`;

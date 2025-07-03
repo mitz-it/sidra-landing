@@ -9,9 +9,10 @@ import {
   SurveySubQuestionContainer,
   SubmitButton,
   SubmitButtonContainer,
+  CancelButton,
 } from "./SurveyForm.styles";
 
-const SurveyForm: React.FC = () => {
+const SurveyForm: React.FC<{ onCancel: () => void }> = ({ onCancel }) => {
   return (
     <form action="">
       <SurveyFormContainer>
@@ -177,7 +178,7 @@ const SurveyForm: React.FC = () => {
             <option value="" selected disabled>
               Select your nationality
             </option>
-            <option value="Banglasesh">Banglasesh</option>
+            <option value="Bangladesh">Bangladesh</option>
             <option value="India">India</option>
             <option value="Egypt">Egypt</option>
             <option value="Nepal">Nepal</option>
@@ -290,20 +291,22 @@ const SurveyForm: React.FC = () => {
         <section>
           <SurveyQuestionContainer>
             <SurveyQuestionNumber>7</SurveyQuestionNumber>
-            <SurveyQuestion>Do you feel you belong in Kuwait?</SurveyQuestion>
+            <SurveyQuestion>
+              Do you feel like you belong in Kuwait?
+            </SurveyQuestion>
           </SurveyQuestionContainer>
 
           <SurveyFormColumn>
             <label>
-              <input type="checkbox" />
+              <input type="radio" name="belonging" value="yes" />
               Yes
             </label>
             <label>
-              <input type="checkbox" />
+              <input type="radio" name="belonging" value="no" />
               No
             </label>
             <label>
-              <input type="checkbox" />
+              <input type="radio" name="belonging" value="maybe" />
               Maybe
             </label>
             <textarea placeholder="Can you tell us why?" />
@@ -318,7 +321,10 @@ const SurveyForm: React.FC = () => {
         </label>
       </SurveyFormContainer>
       <SubmitButtonContainer>
-        <SubmitButton>submit responses</SubmitButton>
+        <CancelButton type="reset" onClick={onCancel}>
+          cancel
+        </CancelButton>
+        <SubmitButton type="submit">submit responses</SubmitButton>
       </SubmitButtonContainer>
     </form>
   );

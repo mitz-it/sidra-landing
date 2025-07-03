@@ -1,5 +1,6 @@
 import BottomNavigation from "../../components/BottomNavigation";
 import {
+  FormCloseButton,
   SurveyContainer,
   SurveyPageOne,
   SurveyPageTwo,
@@ -8,26 +9,33 @@ import {
   SurveyTextSecondary,
   SurveyTitle,
 } from "./Survey.styles";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, type SwiperClass } from "swiper/react";
 import { Mousewheel, Scrollbar, Keyboard } from "swiper/modules";
 import { useState } from "react";
 import SurveyForm from "./components/SurveyForm";
 
 export default function Survey() {
-  const [slide, setSlide] = useState<number>(0);
+  const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
   const [isLocked, setIsLocked] = useState<boolean>(false);
+
+  const slideTo = (index: number) => {
+    setIsLocked(false);
+    swiperRef?.enable();
+    swiperRef?.slideTo(index);
+  };
 
   return (
     <SurveyContainer>
       <Swiper
+        onSwiper={setSwiperRef}
         modules={[Mousewheel, Keyboard, Scrollbar]}
         direction="vertical"
         slidesPerView={1}
         keyboard={{ enabled: true }}
         freeMode={true}
         onSlideChange={(swiper) => {
-          setSlide(swiper.activeIndex);
           if (swiper.activeIndex === 1) {
+            setSwiperRef(swiper);
             setIsLocked(true);
             swiper.disable();
           }
@@ -68,11 +76,24 @@ export default function Survey() {
         </SwiperSlide>
         <SwiperSlide>
           <SurveyPageTwo>
-            <SurveyForm />
+            <FormCloseButton onClick={() => slideTo(0)}>
+              <svg
+                style={{ width: "2.5rem", height: "2.5rem" }}
+                viewBox="0 0 26 27"
+                fill="none"
+              >
+                <path
+                  d="M24.9863 4.6859L21.8004 1.5L12.9868 10.3136L4.17223 1.5L0.986328 4.6859L9.7999 13.5005L0.986328 22.3141L4.17223 25.5L12.9868 16.6864L21.8004 25.5L24.9863 22.3141L16.1728 13.5005L24.9863 4.6859Z"
+                  fill="#FC9918"
+                  stroke="#00171F"
+                />
+              </svg>
+            </FormCloseButton>
+            <SurveyForm onCancel={() => slideTo(0)} />
           </SurveyPageTwo>
         </SwiperSlide>
       </Swiper>
-      {slide === 0 && <BottomNavigation />}
+      {swiperRef?.activeIndex === 0 && <BottomNavigation />}
     </SurveyContainer>
   );
 }
