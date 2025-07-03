@@ -41,7 +41,7 @@ export const plot = [
     plotType: plotEnum.ROOT,
     image: bornRoot,
     description:
-      "In fact, among those <strong>born in the country, 41% are not considered Kuwaiti citizens.</strong> This disparity is reflected in <strong>people's expressed sense of belonging and in how they feel treated based on their nationality.</strong> In a survey conducted by our team, Kuwaitis reported a stronger <mark>sense of belonging</mark> and fairness in treatment compared to Non Kuwaitis.",
+      "In fact, among those <strong>born in the country, 41% are not considered Kuwaiti citizens.</strong> This disparity is reflected in <strong>people's expressed sense of belonging and in how they feel treated based on their nationality.</strong> In a survey conducted by our team, Kuwaitis reported a stronger <mark style='color: white'>sense of belonging</mark> and fairness in treatment compared to Non Kuwaitis.",
   },
   {
     title: "Plot 4",
