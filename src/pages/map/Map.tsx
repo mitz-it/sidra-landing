@@ -21,7 +21,7 @@ import ChillAudio from "../../assets/audios/Chill.m4a";
 import CoolAudio from "../../assets/audios/Cool.m4a";
 import DostiAudio from "../../assets/audios/Dosti.mp3";
 import JugaadAudio from "../../assets/audios/Jugaad.mp3";
-import KataPataAudio from "../../assets/audios/KataPata.m4a";
+import KataPataAudio from "../../assets/audios/Katapata.m4a";
 import KhiladiAudio from "../../assets/audios/Khiladi.mp3";
 import MahdoumAudio from "../../assets/audios/Mahdoum.m4a";
 import MujammalahAudio from "../../assets/audios/Mujammalah.m4a";
