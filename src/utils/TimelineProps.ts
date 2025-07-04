@@ -34,7 +34,7 @@ export const plot = [
     plotType: plotEnum.TREE,
     image: expatriateTree,
     description:
-      "Here, <mark>expatriates</mark> outnumber locals, making up 68.3% of the total population and <mark>75% of the workforce.</mark> The country's cultural tapestry is shaped by these diverse communities of expatriates, who constitute the largest part of Kuwait's social fabric.",
+      "Here, <mark>expatriates</mark> outnumber locals, making up 68.3% of the total population and <mark>75% of the workforce.</mark><br> The country's cultural tapestry is shaped by these diverse communities of expatriates, who constitute the largest part of Kuwait's social fabric.",
   },
   {
     title: "Plot 3",

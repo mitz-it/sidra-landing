@@ -10,7 +10,6 @@ import {
   Plot,
   PlotLegendContainer,
   PlotLegendItem,
-  RootPlot,
   SkipButton,
   SmallSpecialModalText,
   SmallSpecialModalTitle,
@@ -67,6 +66,7 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
             alignItems: "center",
             justifyContent: "space-evenly",
             gap: "1.25rem",
+            overflow: "hidden",
           }}
         >
           <SmallSpecialModalTitle>
@@ -185,9 +185,10 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
           </ModalContent>
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide style={{ overflow: "hidden" }}>
           <ModalContent>
             <ModalText
+              style={{ fontSize: "2rem", width: "57rem" }}
               dangerouslySetInnerHTML={{ __html: plot[1].description }}
               highlightColor="#cab8a0"
             />
@@ -200,9 +201,10 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          <SmallSpecialModalText>
+          <SmallSpecialModalText style={{ width: "42.459rem" }}>
             Yet, for many, their contributions coexist without{" "}
             <strong>limited rights:</strong> no permanent residency, restricted
             access to healthcare, and citizenship that remains unattainable
@@ -215,32 +217,40 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
           style={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
             alignItems: "center",
-            gap: "1.25rem",
+            gap: "3.125rem",
           }}
         >
           <ModalText
             dangerouslySetInnerHTML={{ __html: plot[2].description }}
             highlightColor="#FC9918"
-            style={{ fontSize: "1.5rem" }}
+            style={{ fontSize: "1.5rem", width: "50.125rem" }}
           />
           <Plot
             imagePath={plot[2]?.image ?? ""}
-            width="62.5rem"
-            height="31.25rem"
+            width="65.813rem"
+            height="35.813rem"
           />
         </SwiperSlide>
 
-        <SwiperSlide>
-          <ModalContent>
-            <ModalText
-              dangerouslySetInnerHTML={{ __html: plot[3].description }}
-              highlightColor="#FC9918"
-              style={{ fontSize: "1.5rem" }}
-            />
-            <RootPlot imagePath={plot[3]?.image ?? ""} />
-          </ModalContent>
+        <SwiperSlide
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "5rem",
+          }}
+        >
+          <ModalText
+            dangerouslySetInnerHTML={{ __html: plot[3].description }}
+            highlightColor="#FC9918"
+            style={{ fontSize: "1.5rem", width: "52rem" }}
+          />
+          <Plot
+            imagePath={plot[3]?.image ?? ""}
+            width="88.875rem"
+            height="35.813rem"
+          />
         </SwiperSlide>
 
         <SwiperSlide
@@ -256,7 +266,11 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
             highlightColor="#cab8a0"
             style={{ width: "58.768rem" }}
           />
-          <Plot imagePath={plot[4]?.image ?? ""} />
+          <Plot
+            imagePath={plot[4]?.image ?? ""}
+            width="29.089rem"
+            height="29.089rem"
+          />
         </SwiperSlide>
       </Swiper>
       {activeSlide === 9 ? (
@@ -264,6 +278,17 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
       ) : (
         <SkipButton onClick={() => navigate("/map")}>Skip the intro</SkipButton>
       )}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "1.25rem",
+          right: "1.25rem",
+          fontSize: "0.875rem",
+          color: "#666",
+        }}
+      >
+        Last updated: December 2024
+      </div>
     </Modal>
   );
 };

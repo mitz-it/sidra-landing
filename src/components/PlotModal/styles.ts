@@ -87,32 +87,6 @@ export const Plot = styled.div<{
   background-repeat: no-repeat;
   transition: 0.3s ease-in-out;
   opacity: 1;
-
-  @media (min-width: 1440px) {
-    width: ${(props) => props.width ?? "360px"};
-    height: ${(props) => props.height ?? "360px"};
-  }
-
-  @media (max-height: 840px) {
-    width: ${(props) => props.width ?? "20rem"};
-    height: ${(props) => props.height ?? "20rem"};
-  }
-`;
-
-export const RootPlot = styled.div<{ imagePath: string }>`
-  background-image: url(${(props) => props.imagePath});
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: 0.3s ease-in-out;
-  opacity: 1;
-  width: 75rem;
-  height: 31.25rem;
-
-  @media (min-width: 1440px) and (max-height: 840px) {
-    width: 68rem;
-    height: 23.25rem;
-  }
 `;
 
 export const TreePlot = styled.div<{ imagePath: string }>`
@@ -122,19 +96,8 @@ export const TreePlot = styled.div<{ imagePath: string }>`
   background-repeat: no-repeat;
   transition: 0.3s ease-in-out;
   opacity: 1;
-  width: 75rem;
-  height: 31.25rem;
-
-  @media (min-width: 1440px) {
-    width: 360px;
-    height: 360px;
-  }
-
-  @media (max-height: 840px) {
-    width: 20rem;
-    height: 20rem;
-    margin-top: -1.125rem;
-  }
+  width: 29.089rem;
+  height: 29.089rem;
 `;
 
 export const PlotLegendContainer = styled.div`
