@@ -274,9 +274,13 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
         </SwiperSlide>
       </Swiper>
       {activeSlide === 9 ? (
-        <MapButton onClick={() => navigate("/map")}>Visit map</MapButton>
+        <MapButton onClick={() => navigate("/map?first=true")}>
+          Visit map
+        </MapButton>
       ) : (
-        <SkipButton onClick={() => navigate("/map")}>Skip the intro</SkipButton>
+        <SkipButton onClick={() => navigate("/map?first=true")}>
+          Skip the intro
+        </SkipButton>
       )}
       <div
         style={{

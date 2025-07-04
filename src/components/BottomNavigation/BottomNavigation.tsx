@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import {
   BottomNavigationContainer,
   BottomNavigationItem,
@@ -8,6 +8,7 @@ import {
 const BottomNavigation: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [params] = useSearchParams();
 
   const navLinks = [
     { name: "about", path: "/about" },
@@ -49,8 +50,8 @@ const BottomNavigation: React.FC = () => {
         ))}
       </BottomNavigationSection>
       <BottomNavigationItem
-        onClick={() => navigate("/how-to-navigate")}
-        isActive={location.pathname === "/how-to-navigate"}
+        onClick={() => navigate("/map?how-to-navigate=true")}
+        isActive={params.get("how-to-navigate") === "true"}
         aria-label="how-to-navigate"
       >
         <svg

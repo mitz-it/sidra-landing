@@ -1,22 +1,22 @@
 import styled from "styled-components";
-import { theme } from "../../styles/theme";
-import map from "../../assets/images/map.webp";
+
+import map from "../../../assets/images/map.webp";
+import { theme } from "../../../styles/theme";
 
 export const HowToNavigateContainer = styled.main`
   width: 100vw;
   height: 100vh;
-  display: flex;
+  position: absolute;
 `;
 
 export const HowToNavigateBackground = styled.div`
   width: 100%;
   height: 100%;
   background-image: url(${map});
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(10px);
-  z-index: -1;
+  filter: blur(2px);
   position: absolute;
 `;
 
@@ -43,6 +43,10 @@ export const HowToNavigateModalClose = styled.div`
   position: absolute;
   right: 1.5rem;
   top: 1.5rem;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(0.8);
+  }
 `;
 
 export const HowToNavigateModalTitle = styled.h1`
