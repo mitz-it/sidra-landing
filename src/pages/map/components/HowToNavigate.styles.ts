@@ -6,6 +6,7 @@ import { theme } from "../../../styles/theme";
 export const HowToNavigateContainer = styled.main`
   width: 100vw;
   height: 100vh;
+  display: flex;
   position: absolute;
 `;
 
