@@ -12,7 +12,7 @@ import {
 import { Swiper, SwiperSlide, type SwiperClass } from "swiper/react";
 import { Mousewheel, Scrollbar, Keyboard } from "swiper/modules";
 import { useState } from "react";
-import SurveyForm from "./components/SurveyForm";
+import SurveyForm from "./components/SurveyForm/SurveyForm";
 
 export default function Survey() {
   const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
@@ -90,6 +90,7 @@ export default function Survey() {
               </svg>
             </FormCloseButton>
             <SurveyForm onCancel={() => slideTo(0)} />
+
           </SurveyPageTwo>
         </SwiperSlide>
       </Swiper>
