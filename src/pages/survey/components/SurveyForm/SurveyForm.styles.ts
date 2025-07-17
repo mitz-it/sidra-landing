@@ -15,6 +15,24 @@ export const SurveyFormContainer = styled.div`
     gap: 1rem;
   }
 
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0.625rem 3rem 0.625rem 1.75rem;
+    background-image: url('data:image/svg+xml;utf8,<svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.7617 11.7805L11.0546 12.4876L11.7617 13.1947L12.4688 12.4876L11.7617 11.7805ZM23.0299 1.92659C23.4204 1.53606 23.4204 0.9029 23.0299 0.512376C22.6393 0.121851 22.0062 0.121851 21.6156 0.512376L23.0299 1.92659ZM1.2002 1.21948L0.493105 1.92661L11.0546 12.4876L11.7617 11.7805L12.4688 11.0734L1.90729 0.512359L1.2002 1.21948ZM11.7617 11.7805L12.4688 12.4876L23.0299 1.92659L22.3228 1.21948L21.6156 0.512376L11.0546 11.0734L11.7617 11.7805Z" fill="%2300171F"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.5rem auto;
+    pointer-events: auto;
+    outline: 1px solid rgba(0, 23, 31, 1);
+
+    & option {
+      background-color: ${theme.colors.cream};
+      color: ${theme.colors.black};
+    }
+  }
+
   input,
   select,
   textarea {
