@@ -13,10 +13,34 @@ import { Swiper, SwiperSlide, type SwiperClass } from "swiper/react";
 import { Mousewheel, Scrollbar, Keyboard } from "swiper/modules";
 import { useState } from "react";
 import SurveyForm from "./components/SurveyForm/SurveyForm";
+import SurveyAnswers from "./components/SurveyAnswers/SurveyAnswers";
+
+export interface UserResponses {
+  ageGroup: string;
+  gender: string;
+  bornInKuwait: string;
+  q1_home: number;
+  q2_welcomed: number;
+  q3_memories: number;
+  q4_unfair: number;
+  belong: string;
+}
 
 export default function Survey() {
   const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
   const [isLocked, setIsLocked] = useState<boolean>(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+
+  const [userResponses, setUserResponses] = useState<UserResponses>({
+    ageGroup: "",
+    gender: "",
+    bornInKuwait: "",
+    q1_home: 0,
+    q2_welcomed: 0,
+    q3_memories: 0,
+    q4_unfair: 0,
+    belong: "",
+  });
 
   const slideTo = (index: number) => {
     setIsLocked(false);
@@ -76,21 +100,31 @@ export default function Survey() {
         </SwiperSlide>
         <SwiperSlide>
           <SurveyPageTwo>
-            <FormCloseButton onClick={() => slideTo(0)}>
-              <svg
-                style={{ width: "2.5rem", height: "2.5rem" }}
-                viewBox="0 0 26 27"
-                fill="none"
-              >
-                <path
-                  d="M24.9863 4.6859L21.8004 1.5L12.9868 10.3136L4.17223 1.5L0.986328 4.6859L9.7999 13.5005L0.986328 22.3141L4.17223 25.5L12.9868 16.6864L21.8004 25.5L24.9863 22.3141L16.1728 13.5005L24.9863 4.6859Z"
-                  fill="#FC9918"
-                  stroke="#00171F"
+            {!hasSubmitted && (
+              <>
+                <FormCloseButton onClick={() => slideTo(0)}>
+                  <svg
+                    style={{ width: "2.5rem", height: "2.5rem" }}
+                    viewBox="0 0 26 27"
+                    fill="none"
+                  >
+                    <path
+                      d="M24.9863 4.6859L21.8004 1.5L12.9868 10.3136L4.17223 1.5L0.986328 4.6859L9.7999 13.5005L0.986328 22.3141L4.17223 25.5L12.9868 16.6864L21.8004 25.5L24.9863 22.3141L16.1728 13.5005L24.9863 4.6859Z"
+                      fill="#FC9918"
+                      stroke="#00171F"
+                    />
+                  </svg>
+                </FormCloseButton>
+                <SurveyForm
+                  onCancel={() => slideTo(0)}
+                  setHasSubmitted={setHasSubmitted}
+                  setUserResponses={setUserResponses}
+                  userResponses={userResponses}
                 />
-              </svg>
-            </FormCloseButton>
-            <SurveyForm onCancel={() => slideTo(0)} />
+              </>
+            )}
 
+            {hasSubmitted && <SurveyAnswers userResponses={userResponses} />}
           </SurveyPageTwo>
         </SwiperSlide>
       </Swiper>
