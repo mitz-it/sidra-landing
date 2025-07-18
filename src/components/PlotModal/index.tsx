@@ -188,7 +188,7 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
         <SwiperSlide style={{ overflow: "hidden" }}>
           <ModalContent>
             <ModalText
-              style={{ fontSize: "2rem", width: "57rem" }}
+              style={{ fontSize: "2rem" }}
               dangerouslySetInnerHTML={{ __html: plot[1].description }}
               highlightColor="#cab8a0"
             />

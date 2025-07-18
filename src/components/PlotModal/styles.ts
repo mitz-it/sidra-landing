@@ -96,8 +96,8 @@ export const TreePlot = styled.div<{ imagePath: string }>`
   background-repeat: no-repeat;
   transition: 0.3s ease-in-out;
   opacity: 1;
-  width: 29.089rem;
-  height: 29.089rem;
+  width: 25rem;
+  height: 25rem;
 `;
 
 export const PlotLegendContainer = styled.div`
