@@ -21,7 +21,7 @@ export const Modal = styled.div<{
 
 export const ModalText = styled.p<{ highlightColor?: string }>`
   color: #00171f;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

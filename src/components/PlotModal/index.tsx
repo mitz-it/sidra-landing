@@ -161,7 +161,7 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
           <ModalContent>{/* <LanguageTreePlot /> */}</ModalContent>
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide style={{ overflow: "hidden" }}>
           <ModalContent>
             <ModalText
               dangerouslySetInnerHTML={{ __html: plot[0].description }}
@@ -188,7 +188,7 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
         <SwiperSlide style={{ overflow: "hidden" }}>
           <ModalContent>
             <ModalText
-              style={{ fontSize: "2rem" }}
+              style={{ width: "53rem" }}
               dangerouslySetInnerHTML={{ __html: plot[1].description }}
               highlightColor="#cab8a0"
             />
@@ -266,11 +266,7 @@ export const PlotModal: React.FC<PlotModalProps> = ({ setCurrentSlide }) => {
             highlightColor="#cab8a0"
             style={{ width: "58.768rem" }}
           />
-          <Plot
-            imagePath={plot[4]?.image ?? ""}
-            width="29.089rem"
-            height="29.089rem"
-          />
+          <Plot imagePath={plot[4]?.image ?? ""} width="25rem" height="25rem" />
         </SwiperSlide>
       </Swiper>
       {activeSlide === 9 ? (
