@@ -11,7 +11,9 @@ import {
   SubmitButton,
   SubmitButtonContainer,
   CancelButton,
+  ErrorMessage,
 } from "./SurveyForm.styles";
+import { useState } from "react";
 
 type SurveyFormProps = {
   onCancel: () => void;
@@ -39,19 +41,71 @@ const SurveyForm: React.FC<SurveyFormProps> = ({
 
   const genderOptions = ["Female", "Male", "Prefer to self describe, below:"];
   const bornOptions = ["Born", "Raised", "None of the above"];
+  const languageOptions = [
+    "English",
+    "Arabic",
+    "Hindi",
+    "Bangla",
+    "Urdu",
+    "Tagalog",
+    "Tamil",
+    "Persian",
+    "Nepali",
+    "Amharic",
+    "Other",
+  ];
+  const nationalityOptions = [
+    "Bangladesh",
+    "India",
+    "Egypt",
+    "Nepal",
+    "Pakistan",
+    "Philippines",
+    "Saudi Arabia",
+    "Sri Lanka",
+    "Syria",
+    "Others",
+  ];
 
-  const enableSubmit =
-    userResponses.ageGroup &&
-    userResponses.gender &&
-    userResponses.bornInKuwait &&
-    userResponses.q1_home > 0 &&
-    userResponses.q2_welcomed > 0 &&
-    userResponses.q3_memories > 0 &&
-    userResponses.q4_unfair > 0 &&
-    userResponses.belong;
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const userLanguages = userResponses.languages || [];
+  const userNationality = userResponses.nationality || "";
+  const userTermsAccepted = userResponses.termsAccepted || false;
+
+  const validate = () => {
+    const newErrors: { [key: string]: string } = {};
+    if (!userResponses.gender) newErrors.gender = "This field is required.";
+    if (!userResponses.ageGroup) newErrors.ageGroup = "This field is required.";
+    if (!userResponses.bornInKuwait)
+      newErrors.bornInKuwait = "This field is required.";
+    if (!userResponses.q1_home) newErrors.q1_home = "This field is required.";
+    if (!userResponses.q2_welcomed)
+      newErrors.q2_welcomed = "This field is required.";
+    if (!userResponses.q3_memories)
+      newErrors.q3_memories = "This field is required.";
+    if (!userResponses.q4_unfair)
+      newErrors.q4_unfair = "This field is required.";
+    if (!userResponses.belong) newErrors.belong = "This field is required.";
+    if (!userLanguages || userLanguages.length === 0)
+      newErrors.languages = "Please select at least one language.";
+    if (!userNationality)
+      newErrors.nationality = "Please select your nationality.";
+    if (!userTermsAccepted)
+      newErrors.termsAccepted = "You must accept the Terms and Conditions.";
+    return newErrors;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    setErrors(validationErrors);
+    if (Object.keys(validationErrors).length === 0) {
+      setHasSubmitted(true);
+    }
+  };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit} noValidate>
       <SurveyFormContainer>
         <section>
           <SurveyQuestionContainer>
@@ -84,6 +138,7 @@ const SurveyForm: React.FC<SurveyFormProps> = ({
               type="text"
               placeholder="Write here your answer"
             />
+            {errors.gender && <ErrorMessage>{errors.gender}</ErrorMessage>}
           </SurveyFormColumn>
         </section>
 
@@ -132,6 +187,7 @@ const SurveyForm: React.FC<SurveyFormProps> = ({
               ))}
             </SurveyFormColumn>
           </SurveyFormFlex>
+          {errors.ageGroup && <ErrorMessage>{errors.ageGroup}</ErrorMessage>}
         </section>
 
         <section>
@@ -165,6 +221,9 @@ const SurveyForm: React.FC<SurveyFormProps> = ({
                 {option}
               </label>
             ))}
+            {errors.bornInKuwait && (
+              <ErrorMessage>{errors.bornInKuwait}</ErrorMessage>
+            )}
           </SurveyFormColumn>
         </section>
 
@@ -179,57 +238,33 @@ const SurveyForm: React.FC<SurveyFormProps> = ({
             </div>
           </SurveyQuestionContainer>
           <SurveyFormFlex width={73.75}>
-            <SurveyFormColumn>
-              <label>
-                <input type="checkbox" />
-                English
-              </label>
-              <label>
-                <input type="checkbox" />
-                Arabic
-              </label>
-              <label>
-                <input type="checkbox" />
-                Hindi
-              </label>
-              <label>
-                <input type="checkbox" />
-                Bangla
-              </label>
-            </SurveyFormColumn>
-            <SurveyFormColumn>
-              <label>
-                <input type="checkbox" />
-                Urdu
-              </label>
-              <label>
-                <input type="checkbox" />
-                Tagalog
-              </label>
-              <label>
-                <input type="checkbox" />
-                Tamil
-              </label>
-              <label>
-                <input type="checkbox" />
-                Persian
-              </label>
-            </SurveyFormColumn>
-            <SurveyFormColumn>
-              <label>
-                <input type="checkbox" />
-                Nepali
-              </label>
-              <label>
-                <input type="checkbox" />
-                Amharic
-              </label>
-              <label>
-                <input type="checkbox" />
-                Other
-              </label>
-            </SurveyFormColumn>
+            {Array.from({ length: 3 }).map((_, colIdx) => (
+              <SurveyFormColumn key={colIdx}>
+                {languageOptions.slice(colIdx * 4, colIdx * 4 + 4).map(
+                  (lang) =>
+                    lang && (
+                      <label key={lang}>
+                        <input
+                          type="checkbox"
+                          checked={userLanguages.includes(lang)}
+                          onChange={() => {
+                            const newLangs = userLanguages.includes(lang)
+                              ? userLanguages.filter((l: string) => l !== lang)
+                              : [...userLanguages, lang];
+                            setUserResponses({
+                              ...userResponses,
+                              languages: newLangs,
+                            });
+                          }}
+                        />
+                        {lang}
+                      </label>
+                    )
+                )}
+              </SurveyFormColumn>
+            ))}
           </SurveyFormFlex>
+          {errors.languages && <ErrorMessage>{errors.languages}</ErrorMessage>}
         </section>
 
         <section>
@@ -237,22 +272,29 @@ const SurveyForm: React.FC<SurveyFormProps> = ({
             <SurveyQuestionNumber>5</SurveyQuestionNumber>
             <SurveyQuestion>What is your nationality?</SurveyQuestion>
           </SurveyQuestionContainer>
-
-          <select id="nationality" name="user-nationality">
-            <option value="" selected disabled>
+          <select
+            id="nationality"
+            name="user-nationality"
+            value={userNationality}
+            onChange={(e) =>
+              setUserResponses({
+                ...userResponses,
+                nationality: e.target.value,
+              })
+            }
+          >
+            <option value="" disabled>
               Select your nationality
             </option>
-            <option value="Bangladesh">Bangladesh</option>
-            <option value="India">India</option>
-            <option value="Egypt">Egypt</option>
-            <option value="Nepal">Nepal</option>
-            <option value="Pakistan">Pakistan</option>
-            <option value="Philippines">Philippines</option>
-            <option value="Saudi Arabia">Saudi Arabia</option>
-            <option value="Sri Lanka">Sri Lanka</option>
-            <option value="Syria">Syria</option>
-            <option value="Others">Others</option>
+            {nationalityOptions.map((opt) => (
+              <option key={opt} value={opt}>
+                {opt}
+              </option>
+            ))}
           </select>
+          {errors.nationality && (
+            <ErrorMessage>{errors.nationality}</ErrorMessage>
+          )}
         </section>
 
         <section>
@@ -284,6 +326,7 @@ const SurveyForm: React.FC<SurveyFormProps> = ({
                 </label>
               ))}
             </SurveyFormFlex>
+            {errors.q1_home && <ErrorMessage>{errors.q1_home}</ErrorMessage>}
           </SurveySubQuestionContainer>
           <SurveySubQuestionContainer>
             <SurveyQuestion>
@@ -308,6 +351,9 @@ const SurveyForm: React.FC<SurveyFormProps> = ({
                 </label>
               ))}
             </SurveyFormFlex>
+            {errors.q2_welcomed && (
+              <ErrorMessage>{errors.q2_welcomed}</ErrorMessage>
+            )}
           </SurveySubQuestionContainer>
           <SurveySubQuestionContainer>
             <SurveyQuestion>
@@ -332,6 +378,9 @@ const SurveyForm: React.FC<SurveyFormProps> = ({
                 </label>
               ))}
             </SurveyFormFlex>
+            {errors.q3_memories && (
+              <ErrorMessage>{errors.q3_memories}</ErrorMessage>
+            )}
           </SurveySubQuestionContainer>
           <SurveySubQuestionContainer>
             <SurveyQuestion>
@@ -357,6 +406,9 @@ const SurveyForm: React.FC<SurveyFormProps> = ({
                 </label>
               ))}
             </SurveyFormFlex>
+            {errors.q4_unfair && (
+              <ErrorMessage>{errors.q4_unfair}</ErrorMessage>
+            )}
           </SurveySubQuestionContainer>
         </section>
 
@@ -376,38 +428,59 @@ const SurveyForm: React.FC<SurveyFormProps> = ({
                   name="belong"
                   value={option}
                   checked={userResponses.belong === option}
-                  onChange={(e) =>
+                  onChange={(e) => {
                     setUserResponses({
                       ...userResponses,
                       belong: e.target.value,
-                    })
-                  }
+                      belongReason:
+                        e.target.value === "Maybe"
+                          ? userResponses.belongReason
+                          : "",
+                    });
+                  }}
                 />
                 {option}
               </label>
             ))}
-            <textarea placeholder="Can you tell us why?" />
+            <textarea
+              placeholder="Can you tell us why?"
+              value={userResponses.belongReason}
+              onChange={(e) =>
+                setUserResponses({
+                  ...userResponses,
+                  belongReason: e.target.value,
+                })
+              }
+              disabled={userResponses.belong !== "Maybe"}
+            />
+            {errors.belong && <ErrorMessage>{errors.belong}</ErrorMessage>}
           </SurveyFormColumn>
         </section>
 
         <label>
-          <input type="checkbox" />I have read and agree to the Terms and
-          Conditions and Privacy Policy, including the collection and use of my
-          personal data in compliance with the applicable laws of the State of
-          Kuwait.
+          <input
+            type="checkbox"
+            checked={userTermsAccepted}
+            onChange={(e) =>
+              setUserResponses({
+                ...userResponses,
+                termsAccepted: e.target.checked,
+              })
+            }
+          />
+          I have read and agree to the Terms and Conditions and Privacy Policy,
+          including the collection and use of my personal data in compliance
+          with the applicable laws of the State of Kuwait.
         </label>
+        {errors.termsAccepted && (
+          <ErrorMessage>{errors.termsAccepted}</ErrorMessage>
+        )}
       </SurveyFormContainer>
       <SubmitButtonContainer>
         <CancelButton type="reset" onClick={onCancel}>
           cancel
         </CancelButton>
-        <SubmitButton
-          type="submit"
-          onClick={() => setHasSubmitted(true)}
-          disabled={!enableSubmit}
-        >
-          submit responses
-        </SubmitButton>
+        <SubmitButton type="submit">submit responses</SubmitButton>
       </SubmitButtonContainer>
     </form>
   );

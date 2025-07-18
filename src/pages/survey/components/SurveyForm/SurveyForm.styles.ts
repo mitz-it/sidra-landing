@@ -241,4 +241,12 @@ export const SubmitButton = styled.button<{ isActive?: boolean }>`
   }
 `;
 
+export const ErrorMessage = styled.span`
+  font-family: "Overused Grotesk", sans-serif;
+  color: ${theme.colors.darkRed};
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  display: block;
+`;
+
 

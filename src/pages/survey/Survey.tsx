@@ -24,6 +24,10 @@ export interface UserResponses {
   q3_memories: number;
   q4_unfair: number;
   belong: string;
+  languages: string[];
+  nationality: string;
+  termsAccepted: boolean;
+  belongReason: string;
 }
 
 export default function Survey() {
@@ -40,6 +44,10 @@ export default function Survey() {
     q3_memories: 0,
     q4_unfair: 0,
     belong: "",
+    languages: [],
+    nationality: "",
+    termsAccepted: false,
+    belongReason: "",
   });
 
   const slideTo = (index: number) => {
