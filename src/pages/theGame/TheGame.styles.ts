@@ -15,11 +15,11 @@ export const TheGameCardsContainer = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 2rem;
+  padding-bottom: 6rem;
 `;
 
 export const TheGameTitle = styled.h1`
-  font-size: 5.936rem;
+  font-size: 5rem;
   color: ${theme.colors.white};
   text-align: center;
   font-family: "Zarathustra", sans-serif;
@@ -27,7 +27,7 @@ export const TheGameTitle = styled.h1`
 `;
 
 export const TheGameSubtitle = styled.h2`
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: ${theme.colors.white};
   text-align: center;
   font-family: "Overused Grotesk", sans-serif;
@@ -36,7 +36,7 @@ export const TheGameSubtitle = styled.h2`
 
 export const TheGameImage = styled.img`
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   object-fit: scale-down;
 `;
 
@@ -124,4 +124,18 @@ export const TheGameButtonTextSecondary = styled.span`
   font-size: 1.2rem;
   margin-left: 0.5rem;
   font-weight: 400;
+`;
+
+export const TheGameTextScrollContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+export const TheGameTextSecondary = styled.span`
+  font-family: "Overused Grotesk", sans-serif;
+  color: ${theme.colors.cream};
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+  opacity: 0.7;
 `;

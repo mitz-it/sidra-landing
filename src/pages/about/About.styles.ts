@@ -109,3 +109,18 @@ export const AboutEllipseText = styled.p`
     color: ${theme.colors.cream};
   }
 `;
+
+export const AboutTextScrollContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const AboutTextSecondary = styled.span`
+  font-family: "Overused Grotesk", sans-serif;
+  color: ${theme.colors.cream};
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+  opacity: 0.7;
+`;

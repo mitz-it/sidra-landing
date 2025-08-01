@@ -55,7 +55,7 @@ export const plot = [
     plotType: plotEnum.TREE,
     image: positivityTree,
     description:
-      "Despite this, <mark style='background-color:#FC9918; color: white'>80%</mark> <strong>of all respondents</strong> - Kuwaitis and residents - agree they have <mark style='background-color:#FC9918; color: white'>positive memories</mark> of living in Kuwait. Each memory is tied to their ethnicity, family, and their personal story, making Kuwait a shared <strong>Map of Memories</strong>.",
+      "Despite this, <mark style='background-color:#FC9918; color: white'>80%</mark> <strong>of all respondents</strong> — Kuwaitis and residents — agree they have <mark style='background-color:#FC9918; color: white'>positive memories</mark> of living in Kuwait. Each memory is tied to their ethnicity, family, and their personal story, making Kuwait a shared <strong>Map of Memories</strong>.",
   },
 ];
 

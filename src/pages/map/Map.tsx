@@ -118,7 +118,7 @@ export default function Map() {
                   />
                 </MapButtonContainer>
 
-                <MapButtonContainer bottom="25%" left="12%">
+                <MapButtonContainer bottom="24%" left="12%">
                   <Popover
                     id="Mujammalah"
                     isOpen={selected}
@@ -178,7 +178,7 @@ export default function Map() {
                     isOpen={selected}
                     setIsOpen={setSelected}
                     name="Sidra Tree"
-                    text="In Kuwait's desert, the Sidra tree thrives, symbolizing resilience, unity, and life. Deeply rooted in Islamic culture and Kuwaiti heritage, it embodies survival in harsh climates and inspires environmental awareness. Like the Sidra tree, Kuwait brings together over 100 nationalities, each life a unique leaf on its branches. Together we form a vibrant whole, rooted in shared stories and memories. No matter where we come from, our paths converge here, beneath a common canopy"
+                    text="In Kuwait's desert, the Sidra tree thrives, symbolizing resilience, unity, and life. Deeply rooted in Islamic culture and Kuwaiti heritage, it embodies survival in harsh climates and inspires environmental awareness. Like the Sidra tree, Kuwait brings together over 100 nationalities, each life a unique leaf on its branches. Together we form a vibrant whole, rooted in shared stories and memories. No matter where we come from, our paths converge here, beneath a common canopy."
                     title="Sidra Tree"
                     axisX="right"
                     axisY="bottom"
@@ -253,7 +253,7 @@ export default function Map() {
                   />
                 </MapButtonContainer>
 
-                <MapButtonContainer top="3%" right="5%">
+                <MapButtonContainer top="3%" right="2%">
                   <Popover
                     id="Kata Pata"
                     isOpen={selected}
