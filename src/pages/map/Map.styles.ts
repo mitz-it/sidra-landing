@@ -48,7 +48,7 @@ export const MapButtonContainer = styled.div<{
 export const BackButton = styled.button`
   background: ${theme.colors.yellow};
   color: ${theme.colors.black};
-  border-radius: 18px;
+  border-radius: 1.125rem;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   color: ${theme.colors.black};
