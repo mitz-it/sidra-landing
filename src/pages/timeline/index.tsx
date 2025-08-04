@@ -45,6 +45,7 @@ export default function Timeline() {
         <Intro />
       </SwiperSlide>
       <SwiperSlide>
+
         <TimelineContainer>
           <TimelineProgress currentSlide={currentSlide}/>
           <PlotModal setCurrentSlide={setCurrentSlide} />

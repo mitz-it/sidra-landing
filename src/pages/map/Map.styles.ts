@@ -45,3 +45,31 @@ export const MapButtonContainer = styled.div<{
   ${({ width }) => width && `width: ${width};`}
 `;
 
+export const BackButton = styled.button`
+  background: ${theme.colors.yellow};
+  color: ${theme.colors.black};
+  border-radius: 18px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  color: ${theme.colors.black};
+  transition: background 0.3s;
+  box-shadow: 0px 4px 0px 0px #000000;
+  display: flex;
+  align-items: center;
+  font-family: "Overused Grotesk", sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+`;
+
+

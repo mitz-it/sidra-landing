@@ -23,3 +23,15 @@ export const ProgressBar = styled.div<{ idx: number; currentSlide: number }>`
     props.idx <= props.currentSlide ? "0px 2px 0px 0px #00171f" : ""};
   transition: background 0.3s;
 `;
+export const StoriesText = styled.span`
+  top: 3.5rem;
+  position: absolute;
+  font-family: "Overused Grotesk", sans-serif;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  flex-shrink: 0;
+  z-index: 1000;
+`;
+
