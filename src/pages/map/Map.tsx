@@ -63,7 +63,7 @@ export default function Map() {
               fill="#00171F"
             />
           </svg>
-          back to intro
+          <span>back to intro</span>
         </BackButton>
       )}
       <MapBackground>

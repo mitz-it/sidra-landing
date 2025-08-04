@@ -49,26 +49,44 @@ export const BackButton = styled.button`
   background: ${theme.colors.yellow};
   color: ${theme.colors.black};
   border-radius: 1.125rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   color: ${theme.colors.black};
-  transition: background 0.3s;
+  transition: all 0.3s ease;
   box-shadow: 0px 4px 0px 0px #000000;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-family: "Overused Grotesk", sans-serif;
   font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  gap: 0;
   font-size: 1.125rem;
   position: absolute;
   top: 1rem;
   left: 1rem;
   z-index: 1000;
+  overflow: hidden;
+  white-space: nowrap;
+
+  span {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    max-width: 0;
+    overflow: hidden;
+  }
 
   &:hover {
     filter: brightness(0.8);
+    padding: 0.5rem 1.5rem;
+    gap: 0.5rem;
+    justify-content: flex-start;
+
+    span {
+      opacity: 1;
+      transform: translateX(0);
+      max-width: 200px;
+    }
   }
 `;
 
