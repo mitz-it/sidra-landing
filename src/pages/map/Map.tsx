@@ -83,7 +83,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Aramesh"
                     title="آرامش"
-                    text="Inner core peace and tranquillity in a deep, spiritual way."
+                    text="<b> Inner core </b> peace and tranquillity in a deep, spiritual way."
                     axisX="right"
                     axisY="top"
                     nameOrigin="Persian"
@@ -98,7 +98,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Vibes"
                     title="Vibes"
-                    text="It's an informal term that refers to the emotional atmosphere, feelings, or mood of a person, place, or situation. It is often used to describe the impression or energy something gives off."
+                    text="It's an informal term that refers to the <b>emotional atmosphere</b>, <b>feelings</b>, or <b>mood of a person</b>, <b>place</b>, or <b>situation</b>. It is often used to describe the <b>impression</b> or <b>energy</b> something gives off."
                     axisX="right"
                     axisY="top"
                     nameOrigin="English"
@@ -110,7 +110,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Wasta"
                     title=" واسطه"
-                    text='Refers to the concept of using connections, influence, or intermediaries to achieve something, such as securing a job, gaining a favor, or resolving a problem. While "wasta" can sometimes have a neutral or positive connotation (such as facilitating a legitimate connection or mediation), it is often criticized for perpetuating inequality, corruption, and lack of meritocracy.'
+                    text='Refers to the concept of using <b>connections</b>, <b>influence</b>, or <b>intermediaries to achieve something</b>, such as securing a job, gaining a favor, or resolving a problem. While "wasta" can sometimes have a <b>neutral or positive connotation</b> (such as facilitating a legitimate connection or mediation), it is often criticized for perpetuating <b>inequality</b>, <b>corruption</b>, and lack of <b>meritocracy</b>.'
                     axisX="right"
                     axisY="top"
                     nameOrigin="Arabic"
@@ -122,7 +122,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Bhai"
                     title="(भाई)"
-                    text='This term means "younger brother," but it is often used more broadly to denote camaraderie, friendship, and respect among peers, regardless of actual familial ties. The term embodies the spirit of kinship and community, reflecting the Nepali social structure, where relationships extend beyond bloodlines.'
+                    text='This term means "younger brother," but it is often used more broadly to denote <b>camaraderie</b>, <b>friendship</b>, and <b>respect among peers</b>, regardless of actual familial ties. The term embodies the <b>spirit of kinship</b> and <b>community</b>, reflecting the Nepali social structure, where relationships extend <b>beyond bloodlines</b>.'
                     axisX="right"
                     axisY="top"
                     nameOrigin="Nepali"
@@ -134,7 +134,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Dosti"
                     title="دوستی"
-                    text='This word means "friendship," but it encapsulates a profound sense of loyalty and emotional connection that extends beyond the typical understanding of friendship. In Pakistan, dosti often involves a commitment to support one another through thick and thin, highlighting the importance of camaraderie in social relationships.'
+                    text='This word means "friendship," but it encapsulates a profound <b>sense of loyalty</b> and <b>emotional connection</b> that extends beyond the typical understanding of friendship. In Pakistan, dosti often involves a <b>commitment to support one another</b> through thick and thin, highlighting the importance of camaraderie in social relationships.'
                     axisX="right"
                     axisY="top"
                     nameOrigin="Urdu"
@@ -149,7 +149,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Mujammalah"
                     title="مجاملة"
-                    text="Refers to polite gestures, compliments, or social niceties used to maintain harmony and goodwill in interactions. While it can be used to refer to the efforts of doing what is needed to respect cultural values, it can also mean sacrificing one's authenticity and acting in performative ways that don't reflect what one believes or feels."
+                    text="Refers to <b>polite gestures</b>, <b>compliments</b>, or <b>social niceties</b> used to maintain <b>harmony</b> and <b>goodwill</b> in interactions. While it can be used to refer to the efforts of doing what is needed to respect cultural values, it can also mean <b>sacrificing one's authenticity</b> and <b>acting in performative ways</b> that don't reflect what one believes or feels."
                     axisX="right"
                     axisY="bottom"
                     nameOrigin="Arabic"
@@ -164,7 +164,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Cool"
                     title="Cool"
-                    text="The most popular modern usage refers to being fashionable, impressive, or generally likable. It's widely used in casual conversations and has become a staple of informal English."
+                    text="The most popular modern usage refers to being <b>fashionable</b>, <b>impressive</b>, or <b>generally likable</b>. It's widely used in casual conversations and has become a staple of informal English."
                     axisX="right"
                     axisY="bottom"
                     nameOrigin="English"
@@ -176,7 +176,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Ajeeb"
                     title="عجيب"
-                    text="An expression often used in the Gulf countries to describe something that elicits surprise, wonder, amazement or admiration."
+                    text="An expression often used in the Gulf countries to describe something that <b>elicits surprise</b>, <b>wonder</b>, <b>amazement</b> or <b>admiration</b>."
                     axisX="right"
                     axisY="bottom"
                     nameOrigin="Arabic"
@@ -188,7 +188,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Yalahwi"
                     title="يا لهوي."
-                    text={`It's a common expression in some Arabic dialects, particularly in Egyptian Arabic, to convey feelings of astonishment, worry, or alarm. For example, when someone hears unexpected bad news, they might exclaim: "Yalawhi!”, meaning "Oh my goodness!" or "Oh no!".`}
+                    text={`It's a common expression in some Arabic dialects, particularly in Egyptian Arabic, to convey feelings of <b>astonishment</b>, <b>worry</b>, or <b>alarm</b>. For example, when someone hears unexpected bad news, they might exclaim: "Yalawhi!", meaning "Oh my goodness!" or "Oh no!".`}
                     axisX="right"
                     axisY="bottom"
                     nameOrigin="Arabic"
@@ -202,7 +202,7 @@ export default function Map() {
                     isOpen={selected}
                     setIsOpen={setSelected}
                     name="Sidra Tree"
-                    text="In Kuwait's desert, the Sidra tree thrives, symbolizing resilience, unity, and life. Deeply rooted in Islamic culture and Kuwaiti heritage, it embodies survival in harsh climates and inspires environmental awareness. Like the Sidra tree, Kuwait brings together over 100 nationalities, each life a unique leaf on its branches. Together we form a vibrant whole, rooted in shared stories and memories. No matter where we come from, our paths converge here, beneath a common canopy."
+                    text="In Kuwait's desert, the Sidra tree thrives, symbolizing <b>resilience</b>, <b>unity</b>, and <b>life</b>. Deeply rooted in Islamic culture and Kuwaiti heritage, it embodies survival in harsh climates and inspires <b>environmental awareness</b>. Like the Sidra tree, Kuwait brings together over <b>100 nationalities</b>, each life a unique leaf on its branches. Together we form a <b>vibrant whole</b>, rooted in <b>shared stories</b> and <b>memories</b>. No matter where we come from, our paths converge here, beneath a common canopy."
                     title="Sidra Tree"
                     axisX="right"
                     axisY="bottom"
@@ -218,7 +218,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Bunna"
                     title="ቡና"
-                    text='This word means "coffee" in Amharic, but it encompasses much more than just the beverage. Coffee holds a significant cultural and social role in Ethiopia, often involving elaborate ceremonies where the coffee is roasted, ground, and brewed in front of guests. The bunna ceremony symbolizes hospitality, community, and a shared experience that is central to Ethiopian social life.'
+                    text='This word means "<b>coffee</b>" in Amharic, but it encompasses much more than just the beverage. Coffee holds a significant <b>cultural and social role</b> in Ethiopia, often involving <b>elaborate ceremonies</b> where the coffee is <b>roasted</b>, <b>ground</b>, and <b>brewed</b> in front of guests. The bunna ceremony symbolizes hospitality, community, and a shared experience that is central to Ethiopian social life.'
                     axisX="left"
                     axisY="top"
                     nameOrigin="Amharic"
@@ -230,7 +230,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Sandigan"
                     title="Sandigan"
-                    text='Means "pillar," "support," or "foundation." It refers to something or someone that serves as a source of strength, support, or reliability.'
+                    text='Means "pillar," "support," or "foundation." It refers to something or someone that <b>serves as a source of strength</b>, <b>support</b>, or <b>reliability</b>.'
                     axisX="left"
                     axisY="top"
                     nameOrigin="Tagalog"
@@ -242,7 +242,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Bayanihan"
                     title="Bayanihan"
-                    text="'We must give and share whatever we have and we are lucky if we have something to share'. One of the inherent traits that identifies Filipinos is 'Bayanihan', or the willingness to help others without asking for something in return."
+                    text="'We must give and share whatever we have and we are lucky if we have something to share'. One of the inherent traits that identifies Filipinos is 'Bayanihan', or the <b>willingness to help others without asking for something in return</b>."
                     axisX="left"
                     axisY="top"
                     nameOrigin="Tagalog"
@@ -257,7 +257,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Adera"
                     title="አደራ"
-                    text="When a person passes a valuable belonging of theirs to someone to look after, they use this phrase to let them know they have a big responsibility. For example, if you're going to babysit somebody's little kid, usually the mother will say adera lijaen. (Ligaen means 'my kid'). The phrase adera contains 'please', 'take cake of my child', 'promise to protect them' and 'I'm trusting you' all in one word. It's nothing to be taken lightly."
+                    text="When a person passes a <b>valuable belonging of theirs to someone to look after</b>, they use this phrase <b>to let them know they have a big responsibility</b>. For example, if you're going to babysit somebody's little kid, usually the mother will say adera lijaen. (Ligaen means 'my kid'). The phrase adera contains 'please', 'take care of my child', 'promise to protect them' and 'I'm trusting you' all in one word. It's nothing to be taken lightly."
                     axisX="left"
                     axisY="top"
                     nameOrigin="Amharic"
@@ -269,7 +269,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Ayzoh"
                     title="አይዞህ"
-                    text="Lots of Amharic speakers land on this word. It can translate into something like 'it's okay', 'it's going to be okay', 'I hope you didn't hurt yourself' or 'don't worry' depending on the situation. Sometimes it can mean 'be strong' or 'have courage', and can be applied to anything as small as someone tripping while walking. It could be thought of as the acknowledgement of someone else's struggle, with a bit of encouragement in there, too, and it's used all the time. "
+                    text="Lots of Amharic speakers land on this word. It can translate into something like '<b>it's okay</b>', '<b>it's going to be okay</b>', '<b>I hope you didn't hurt yourself</b>' or '<b>don't worry</b>' depending on the situation. Sometimes it can mean 'be strong' or 'have courage', and can be applied to anything as small as someone tripping while walking. It could be thought of as the <b>acknowledgement of someone else's struggle</b>, with a bit of encouragement in there, too, and it's used all the time. "
                     axisX="left"
                     axisY="top"
                     nameOrigin="Amharic"
@@ -284,7 +284,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Kata Pata"
                     title="කට පට"
-                    text="This word describes the cheerful, often noisy, and lively atmosphere created by people talking or bustling around, often in a group setting. It's used to express the buzz of conversation or activity, especially in places like markets or family gatherings, where there's a vibrant hum of people going about their lives."
+                    text="This word describes the <b>cheerful</b>, <b>often noisy</b>, and <b>lively atmosphere</b> created by <b>people talking</b> or <b>bustling around</b>, often in a group setting. It's used to express the buzz of conversation or activity, especially in places like markets or family gatherings, where there's a vibrant hum of people going about their lives."
                     axisX="left"
                     axisY="top"
                     nameOrigin="Tamil"
@@ -296,7 +296,7 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Jugaad"
                     title="जुगाड़"
-                    text="Using skill and imagination to find an easy solution to a problem or to fix or make something using cheap, basic items."
+                    text="Using skill and imagination <b>to find an easy solution to a problem</b> or to fix or make something using cheap, basic items."
                     axisX="left"
                     axisY="top"
                     nameOrigin="Hindi"
@@ -308,8 +308,9 @@ export default function Map() {
                     setIsOpen={setSelected}
                     name="Tarof"
                     title="تعارف"
-                    text="Tarof is a complex and culturally significant concept in Iranian culture that revolves around politeness, hospitality, and social etiquette. It refers to a set of social behaviors where people make offers or express sentiments that may not be meant to be taken literally. Essentially, it's a ritual of courtesy where individuals show deference, generosity, or respect, often beyond what is genuinely intended or feasible.
-For example, someone may insist on paying for a meal even if they expect the other person to refuse their offer, or they may repeatedly offer you something out of politeness, not necessarily expecting you to accept. The art of tarof lies in recognizing when an offer is genuine and when it's merely a polite gesture. At its core, tarof is about maintaining harmony, showing respect, and navigating social interactions gracefully, but it can also lead to a degree of ambiguity or even miscommunication if not understood well.
+                    text="Tarof is a complex and culturally significant concept in Iranian culture that revolves around politeness, hospitality, and social etiquette. It refers to a set of social behaviors where people make offers or express sentiments that may not be meant to be taken literally. Essentially, it's a <b>ritual of courtesy</b> where individuals show <b>deference</b>, <b>generosity</b>, or <b>respect</b>, often beyond what is <b>genuinely intended</b> or <b>feasible</b>.
+
+For example, someone may insist on paying for a meal even if they expect the other person to refuse their offer, or they may repeatedly offer you something out of politeness, not necessarily expecting you to accept. <b>The art of tarof lies in recognizing when an offer is genuine and when it's merely a polite gesture</b>. At its core, tarof is about maintaining harmony, showing respect, and navigating social interactions gracefully, but it can also lead to a degree of ambiguity or even miscommunication if not understood well.
 "
                     axisX="left"
                     axisY="top"
@@ -325,7 +326,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                     setIsOpen={setSelected}
                     name="Abadai"
                     title="قبضاي"
-                    text="It's a colloquial word used in Levantine Arabic, particularly in Syrian, Lebanese, and Palestinian dialects. It refers to someone who is strong, courageous, or has a commanding presence, often associated with street smarts or physical strength."
+                    text="It's a colloquial word used in Levantine Arabic, particularly in Syrian, Lebanese, and Palestinian dialects. <b>It refers to someone who is strong</b>, <b>courageous</b>, or has a <b>commanding presence</b>, often associated with street smarts or physical strength."
                     axisX="left"
                     axisY="top"
                     nameOrigin="Arabic"
@@ -340,7 +341,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                     setIsOpen={setSelected}
                     name="Chill"
                     title="Chill"
-                    text="It's a versatile term often used in informal and casual conversations to indicate relaxation, calmness, or something positive."
+                    text="It's a versatile term often used in informal and casual conversations to indicate <b>relaxation</b>, <b>calmness</b>, or <b>something positive</b>."
                     axisX="left"
                     axisY="top"
                     nameOrigin="English"
@@ -352,7 +353,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                     setIsOpen={setSelected}
                     name="Mahdoum"
                     title="مهضوم"
-                    text="It's a colloquial Arabic word primarily used in Levantine dialects, such as Lebanese and Syrian Arabic. Its meaning depends on context, but it generally conveys a positive sentiment related to something being charming, cute, funny or entertaining."
+                    text="It's a colloquial Arabic word primarily used in Levantine dialects, such as Lebanese and Syrian Arabic. Its meaning depends on context, but it generally conveys a <b>positive sentiment</b> related to something being <b>charming</b>, <b>cute</b>, <b>funny</b> or <b>entertaining</b>."
                     axisX="left"
                     axisY="top"
                     nameOrigin="Arabic"
@@ -364,7 +365,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                     setIsOpen={setSelected}
                     name="Sukoon"
                     title="سکون"
-                    text="A sense of peace and tranquility, especially after a long or challenging day, or in the presence of loved ones."
+                    text="A <b>sense of peace</b> and <b>tranquility</b>, especially after a long or challenging day, or in the presence of oved ones."
                     axisX="left"
                     axisY="top"
                     nameOrigin="Urdu"
@@ -376,7 +377,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                     setIsOpen={setSelected}
                     name="Adda"
                     title="আড্ডা"
-                    text="This refers to informal, relaxed conversations that Bengalis love to have with friends and family, often about anything under the sun—philosophy, politics, art, literature, or just gossip. An adda session often involves a strong sense of community, intellectual curiosity, and bonding, which are deeply valued in Bengali culture."
+                    text="This refers to informal, relaxed conversations that Bengalis love to have with friends and family, often about anything under the sun—philosophy, politics, art, literature, or just gossip. <b>An adda session often involves a strong sense of community</b>, <b>intellectual curiosity</b>, and <b>bonding</b>, which are deeply valued in Bengali culture."
                     axisX="left"
                     axisY="top"
                     nameOrigin="Bangla"
@@ -391,7 +392,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                     setIsOpen={setSelected}
                     name="Khiladi"
                     title="खिलाड़ी"
-                    text="Literally means “player,” but it has a sense of someone who is smart, streetwise, and strategic."
+                    text={`Literally means "player", but it has a sense of <b>someone who is smart</b>, <b>streetwise</b>, and <b>strategic</b>.`}
                     axisX="left"
                     axisY="bottom"
                     nameOrigin="Hindi"
@@ -403,7 +404,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                     setIsOpen={setSelected}
                     name="Achcharu"
                     title="அச்சாறு"
-                    text="This word refers to a popular Sri Lankan pickle-like dish, but it also describes a unique concept—a mix of different elements that create something vibrant and distinct. It's used in slang to describe a jumble of things, or situations with a variety of mixed elements, like a group of people with different personalities."
+                    text="This word refers to a popular Sri Lankan pickle-like dish, but it also <b>describes a unique concept</b>—a mix of different elements that create something vibrant and distinct. It's used in slang to <b>describe a jumble of things</b>, or <b>situations with a variety of mixed elements</b>, like a <b>group of people with different personalities</b>."
                     axisX="left"
                     axisY="bottom"
                     nameOrigin="Tamil"
@@ -415,7 +416,7 @@ For example, someone may insist on paying for a meal even if they expect the oth
                     setIsOpen={setSelected}
                     name="Sajilo"
                     title="सजिलो"
-                    text={`This term means "easy" but is often used in a broader context to describe anything that feels comfortable or convenient. It reflects the Nepali attitude towards life's challenges: striving for simplicity. It captures an essence of ease that transcends mere practicality, and it's often used in social contexts to denote a sense of being at ease with one's surroundings or tasks.`}
+                    text={`This term means "easy" but is often used in a broader context to describe <b>anything that feels comfortable</b> or <b>convenient</b>. It reflects the Nepali attitude towards life's challenges: striving for simplicity. It captures <b>an essence of ease that transcends mere practicality</b>, and it's often used in social contexts to denote a sense of being at ease with one's surroundings or tasks.`}
                     axisX="left"
                     axisY="bottom"
                     nameOrigin="Nepali"

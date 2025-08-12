@@ -98,7 +98,7 @@ const Popover: React.FC<PopoverProps> = ({
             </MapPopoverSubTitle>
           ) : null}
           <MapPopoverDivider />
-          <MapPopoverText>{text}</MapPopoverText>
+          <MapPopoverText dangerouslySetInnerHTML={{ __html: text }} />
         </MapPopover>
       )}
       <audio ref={audioRef} src={audio} style={{ display: "none" }} />
